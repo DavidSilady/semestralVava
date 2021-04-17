@@ -10,6 +10,7 @@ package model;
  * @author adamg
  */
 public class Review {
+
     private String username;
     private String title;
     private String commentary;
@@ -46,8 +47,6 @@ public class Review {
     public void setScore(byte score) {
         this.score = score;
     }
-    
-    
 
     public Review(String username, String title, String commentary, byte score) {
         this.username = username;
