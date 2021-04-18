@@ -6,42 +6,41 @@
 package model;
 
 import java.util.ArrayList;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
 /**
  *
  * @author adamg
  */
-public class Movie extends Video{
-    private ArrayList<Movie> sequels;
-    private ArrayList<Movie> prequels;
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Movie extends Video {
 
-    public ArrayList<Movie> getSequels() {
-        return sequels;
+    private ArrayList<Movie> related;
+
+    public Movie(String title, String genre, short length, short year, String studio, ArrayList<VideoCharacter> characters, String curiosity, Rating ratings, String director, ArrayList<Movie> related) {
+        super(title, genre, length, year, studio, characters, curiosity, ratings, director);
+        this.related = related;
     }
 
-    public void setSequels(ArrayList<Movie> sequels) {
-        this.sequels = sequels;
+    public Movie() {
     }
 
-    public ArrayList<Movie> getPrequels() {
-        return prequels;
+    public ArrayList<Movie> getRelated() {
+        return related;
     }
 
-    public void setPrequels(ArrayList<Movie> prequels) {
-        this.prequels = prequels;
+    public void setRelated(ArrayList<Movie> related) {
+        this.related = related;
     }
     
-    public void addSequel(Movie sequel){
-        this.sequels.add(sequel);
-    }
-    
-    public void addPrequel(Movie prequel){
-        this.prequels.add(prequel);
+    public void addRelated(Movie movie){
+        this.related.add(movie);
     }
 
-    public Movie(String title, String genre, short length, short year, String studio, String curiosity, String director) {
-        super(title, genre, length, year, studio, curiosity, director);
-        this.sequels = new ArrayList<>();
-        this.prequels = new ArrayList<>();
-    }    
+    @Override
+    public String toString() {
+        return "Movie{" + super.toString() + "related=" + related + '}';
+    }
+
 }
