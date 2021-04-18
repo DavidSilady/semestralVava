@@ -1,11 +1,14 @@
 .text-field {
-    -fx-background-color: #a9a9a9 , white , white;
-    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-border-color: #EF5350;
+    -fx-border-width: 0 0 2 0;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
 }
-
 .text-field:focused {
-    -fx-background-color: #a9a9a9 , white , white;
-    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+    -fx-background-color: -fx-focus-color, -fx-background ;
+    -fx-border-color: #E57373;
+    -fx-border-width: 0 0 1 0;
 }
 
 .button {
