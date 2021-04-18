@@ -12,20 +12,20 @@
             <Font name="System Italic" size="18.0" />
          </font>
       </Text>
-      <AnchorPane layoutX="19.0" layoutY="69.0" prefHeight="557.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" AnchorPane.leftAnchor="10.0" />
-      <AnchorPane layoutX="395.0" layoutY="69.0" prefHeight="557.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" AnchorPane.leftAnchor="397.0" AnchorPane.rightAnchor="397.0" />
-      <AnchorPane layoutX="771.0" layoutY="69.0" prefHeight="557.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" AnchorPane.rightAnchor="10.0" />
-      <Label layoutX="7.0" layoutY="27.0" text="New Releases" textFill="#ef5350">
+      <AnchorPane fx:id="newReleasesPane" layoutX="19.0" layoutY="69.0" prefHeight="557.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" AnchorPane.leftAnchor="10.0" />
+      <AnchorPane fx:id="mostViewedPane" layoutX="395.0" layoutY="69.0" prefHeight="557.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" AnchorPane.leftAnchor="397.0" AnchorPane.rightAnchor="397.0" />
+      <AnchorPane fx:id="recommendedPane" layoutX="771.0" layoutY="69.0" prefHeight="557.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" AnchorPane.rightAnchor="10.0" />
+      <Label fx:id="newReleasesLabel" layoutX="7.0" layoutY="27.0" text="New Releases" textFill="#ef5350">
          <font>
             <Font name="System Bold" size="39.0" />
          </font>
       </Label>
-      <Label layoutX="394.0" layoutY="27.0" text="Most Viewed" textFill="#ef5350">
+      <Label fx:id="mostViewedLabel" layoutX="394.0" layoutY="27.0" text="Most Viewed" textFill="#ef5350">
          <font>
             <Font name="System Bold" size="39.0" />
          </font>
       </Label>
-      <Label layoutX="782.0" layoutY="27.0" text="Recommended" textFill="#ef5350">
+      <Label fx:id="recommendedLabel" layoutX="782.0" layoutY="27.0" text="Recommended" textFill="#ef5350">
          <font>
             <Font name="System Bold" size="39.0" />
          </font>

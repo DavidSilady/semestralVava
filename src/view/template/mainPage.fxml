@@ -17,13 +17,13 @@
       </Text>
       <Pane layoutX="114.0" layoutY="4.0" prefHeight="25.0" prefWidth="1051.0" style="-fx-background-color: white; -fx-border-color: #EF5350; -fx-border-width: 0 0 2 0;">
          <children>
-            <Button layoutX="944.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="107.0" text="Log Out" />
+            <Button fx:id="logButton" layoutX="944.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="107.0" text="Log Out" />
             <Button fx:id="profileButton" layoutX="826.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Profile" />
-            <TextField layoutX="413.0" prefHeight="25.0" prefWidth="270.0" promptText="Search term" />
-            <Button layoutX="683.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="66.0" text="Search" />
-            <Button layoutX="119.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Daily Tips" />
-            <Button mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Charts" />
-            <Button layoutX="237.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Home" />
+            <TextField fx:id="searchField" layoutX="413.0" prefHeight="25.0" prefWidth="270.0" promptText="Search term" />
+            <Button fx:id="searchButton" layoutX="683.0" mnemonicParsing="false" onAction="#searchGeneral" prefHeight="25.0" prefWidth="66.0" text="Search" />
+            <Button layoutX="119.0" mnemonicParsing="false" onAction="#goToDaily" prefHeight="25.0" prefWidth="107.0" text="Daily Tips" />
+            <Button mnemonicParsing="false" onAction="#goToCharts" prefHeight="25.0" prefWidth="107.0" text="Charts" />
+            <Button layoutX="237.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="25.0" prefWidth="107.0" text="Home" />
          </children>
       </Pane>
    </children>

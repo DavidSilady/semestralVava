@@ -4,23 +4,46 @@ import controller.abstracts.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import view.SceneManager;
 
 public class MainPageController extends Controller {
 
     @FXML
+    private AnchorPane dynamicPane;
+
+    @FXML
+    private Button logButton;
+
+    @FXML
     private Button profileButton;
 
     @FXML
-    private Button productsButton;
+    private TextField searchField;
 
     @FXML
-    private Button invoicesButton;
+    private Button searchButton;
 
     @FXML
-    private AnchorPane dynamicPane;
+    void goToCharts(ActionEvent event) {
 
+    }
+
+    @FXML
+    void goToDaily(ActionEvent event) {
+
+    }
+
+    @FXML
+    void goToHome(ActionEvent event) {
+
+    }
+
+    @FXML
+    void searchGeneral(ActionEvent event) {
+
+    }
 
     @FXML
     void goToProfile(ActionEvent event) throws Exception {
