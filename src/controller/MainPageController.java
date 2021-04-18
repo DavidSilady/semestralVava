@@ -36,8 +36,8 @@ public class MainPageController extends Controller {
     }
 
     @FXML
-    void goToHome(ActionEvent event) {
-
+    void goToHome(ActionEvent event) throws Exception {
+        SceneManager.switchDynamicPane(dynamicPane, "homePane");
     }
 
     @FXML

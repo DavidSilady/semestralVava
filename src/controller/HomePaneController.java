@@ -46,7 +46,7 @@ public class HomePaneController extends Controller {
     private void setupRecommendedPane() throws Exception {
         FXMLLoader fxmlLoader = SceneManager.switchDynamicPane(recommendedPane, "listingContainer");
         recommendedPaneController = fxmlLoader.getController();
-        recommendedPaneController.setParameters(370, 557);
+        recommendedPaneController.setParameters(370, 240);
 
         // TODO: get list from model and populate
     }
@@ -54,7 +54,7 @@ public class HomePaneController extends Controller {
     private void setupMostViewedPane() throws Exception {
         FXMLLoader fxmlLoader = SceneManager.switchDynamicPane(mostViewedPane, "listingContainer");
         mostViewedPaneController = fxmlLoader.getController();
-        mostViewedPaneController.setParameters(370, 557);
+        mostViewedPaneController.setParameters(370, 240);
 
         // TODO: get list from model and populate
     }
@@ -62,7 +62,7 @@ public class HomePaneController extends Controller {
     private void setupNewReleasesPane() throws Exception {
         FXMLLoader fxmlLoader = SceneManager.switchDynamicPane(newReleasesPane, "listingContainer");
         newReleasesPaneController = fxmlLoader.getController();
-        newReleasesPaneController.setParameters(370, 557);
+        newReleasesPaneController.setParameters(760, 557);
 
         // TODO: get list from model and populate
     }
