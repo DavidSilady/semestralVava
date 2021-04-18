@@ -9,23 +9,22 @@
 
 <AnchorPane prefHeight="720" prefWidth="1165" style="-fx-background-color: white;" stylesheets="/view/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPageController">
    <children>
-      <AnchorPane fx:id="dynamicPane" layoutY="80.0" prefHeight="640.0" prefWidth="1165.0">
-         <children>
-            <Pane layoutX="101.0" layoutY="-69.0" prefHeight="27.0" prefWidth="1051.0" style="-fx-background-color: #efefef;">
-               <children>
-                  <Button fx:id="logOutButton" layoutX="944.0" layoutY="2.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="107.0" text="LOG OUT" />
-                  <Button fx:id="profileButton" layoutX="826.0" layoutY="1.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Profile" />
-                  <TextField layoutX="413.0" layoutY="1.0" prefHeight="25.0" prefWidth="270.0" promptText="Search term" />
-                  <Button fx:id="profileButton1" layoutX="683.0" layoutY="1.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="66.0" text="Search" />
-                  <Button fx:id="profileButton2" layoutX="119.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Daily Tips" />
-                  <Button fx:id="profileButton21" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Charts" />
-               </children>
-            </Pane>
-         </children></AnchorPane>
-      <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGO" textAlignment="CENTER">
+      <AnchorPane fx:id="dynamicPane" layoutY="80.0" prefHeight="640.0" prefWidth="1165.0" />
+      <Text layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGO" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
+      <Pane layoutX="114.0" layoutY="4.0" prefHeight="25.0" prefWidth="1051.0" style="-fx-background-color: white;">
+         <children>
+            <Button layoutX="944.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="107.0" text="Log Out" />
+            <Button fx:id="profileButton" layoutX="826.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Profile" />
+            <TextField layoutX="413.0" prefHeight="25.0" prefWidth="270.0" promptText="Search term" />
+            <Button layoutX="683.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="66.0" text="Search" />
+            <Button layoutX="119.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Daily Tips" />
+            <Button mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Charts" />
+            <Button layoutX="237.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Home" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
