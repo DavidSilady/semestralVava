@@ -28,7 +28,7 @@ public class MainPageController extends Controller {
     }
 
     public void init() throws Exception {
-        SceneManager.switchDynamicPane(dynamicPane, "profilePane");
+        SceneManager.switchDynamicPane(dynamicPane, "homePane");
     }
 
     @FXML
