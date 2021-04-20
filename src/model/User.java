@@ -1,6 +1,7 @@
 package model;
 
 
+import java.util.ArrayList;
 import model.interfaces.Listable;
 import model.interfaces.Passable;
 
@@ -13,28 +14,20 @@ public class User implements Listable, Passable {
     private String password = "";
     private String username = "";
 
+    private ArrayList<Movie> favMovies = new ArrayList<>();
+    private ArrayList<TVShow> favTVShows = new ArrayList<>();
+    private ArrayList<Review> reviews = new ArrayList<>();
+    
     public User() { };
 
-    public User(String name, String city, String zip, String address, String password, String username) {
+    public User(String name, String password, String username, ArrayList<Movie> favMovies, ArrayList<TVShow> favTVShows, ArrayList<Review> reviews) {
         this.name = name;
-        this.city = city;
-        this.zip = zip;
-        this.address = address;
         this.password = password;
         this.username = username;
+        this.favMovies = favMovies;
+        this.favTVShows = favTVShows;
+        this.reviews = reviews;
     }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() { return password; }
-
-    public void setPassword(String password) { this.password = password; }
 
     public String getName() {
         return name;
@@ -42,6 +35,59 @@ public class User implements Listable, Passable {
 
     public void setName(String name) {
         this.name = name;
+    }
+    
+    public ArrayList<Movie> getFavMovies() {
+        return favMovies;
+    }
+    
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) { this.password = password; }
+
+    public void setFavMovies(ArrayList<Movie> favMovies) {
+        this.favMovies = favMovies;
+    }
+
+    public ArrayList<TVShow> getFavTVShows() {
+        return favTVShows;
+    }
+
+    public void setFavTVShows(ArrayList<TVShow> favTVShows) {
+        this.favTVShows = favTVShows;
+    }
+    
+    public void addFavTVShow(TVShow tvshow){
+        this.favTVShows.add(tvshow);
+    }
+
+    public void addFavMovie(Movie movie){
+        this.favMovies.add(movie);
+    }
+
+    public void addReview(Review review){
+        this.reviews.add(review);
+    }    
+
+
+    
+    
+    
+    public User(String name, String city, String zip, String address, String password, String username) {
+        this.name = name;
+        this.city = city;
+        this.zip = zip;
+        this.address = address;
+        this.password = password;
+        this.username = username;
     }
 
     public String getCity() {
