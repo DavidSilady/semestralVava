@@ -16,31 +16,31 @@ import javax.xml.bind.annotation.XmlAccessorType;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Movie extends Video {
 
-    private ArrayList<Movie> related;
+    private ArrayList<Integer> relatedIndeces;
 
-    public Movie(String title, String genre, short length, short year, String studio, ArrayList<VideoCharacter> characters, String curiosity, Rating ratings, String director, ArrayList<Movie> related) {
+    public Movie(String title, String genre, short length, short year, String studio, ArrayList<VideoCharacter> characters, String curiosity, Rating ratings, String director, ArrayList<Integer> relatedIndeces) {
         super(title, genre, length, year, studio, characters, curiosity, ratings, director);
-        this.related = related;
+        this.relatedIndeces = relatedIndeces;
     }
 
     public Movie() {
     }
 
-    public ArrayList<Movie> getRelated() {
-        return related;
+    public ArrayList<Integer> getRelatedIndeces() {
+        return relatedIndeces;
     }
 
-    public void setRelated(ArrayList<Movie> related) {
-        this.related = related;
+    public void setRelated(ArrayList<Integer> relatedIndeces) {
+        this.relatedIndeces = relatedIndeces;
     }
     
-    public void addRelated(Movie movie){
-        this.related.add(movie);
+    public void addRelated(Integer relatedIndex){
+        this.relatedIndeces.add(relatedIndex);
     }
 
     @Override
     public String toString() {
-        return "Movie{" + super.toString() + "related=" + related + '}';
+        return "Movie{" + super.toString() + "related=" + relatedIndeces.toString() + '}';
     }
 
 }
