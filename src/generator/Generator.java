@@ -7,9 +7,11 @@ package generator;
 
 import model.VideoCharacter;
 import model.Movie;
-import com.github.javafaker.Faker;
+//import com.github.javafaker.Faker;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import model.Movies;
 import model.Rating;
 import model.TVShow;
@@ -23,7 +25,7 @@ import xml_io_manager.XML_ReadWrite;
  */
 public class Generator {
     private static Random nahoda = new Random();
-    private static Faker faker = new Faker();
+    //private static Faker faker = new Faker();
     
     private static String[] nazvyFilm = {
         "Rambo", "Rocky", "John Wick", "John Wick Chapter 2", "Terminator", "Scarface", "Rambo First Blood Part II", "I, legend", "Bad Boys", "Interstellar", "Die Hard 2", "Bad Boys 2",
@@ -48,100 +50,154 @@ public class Generator {
         "drama", "western", "war", "historic", "real-based"
     };
     
-    // nastavi pribuzne filmy k filmu movie
-    public static void setRelatedMovies(ArrayList<Movie> movies, Movie movie){
-        for (int i = 0; i < movies.size(); i++) {
-            Movie mov = movies.get(i);
-            
-            // ak nazov existujuceho filmu obsahuje v nazve film ktoremu chceme pridelit pribuzne filmy ... napr Deadpool, Deadpool 2
-            if(mov.getTitle().toLowerCase().contains(movie.getTitle().toLowerCase())){
-                movie.addRelated(mov);
+    // porovnaj pismena na rovnakych poziciach, ci sa zhoduju
+    // vrat podiel zhodnych a celkovej dlzky kratsieho zo slov
+    private static double zhodnost(String str1, String str2) {
+        double zhoda = 0;
+
+        int pocetZhodnych = 0;
+
+        int kratsi = (str1.length() < str2.length()) ? str1.length() : str2.length();
+        
+        for (int i = 0; i < kratsi; i++) {
+
+            if (str1.charAt(i) == str2.charAt(i)) {
+                pocetZhodnych++;
             }
         }
+
+        if(kratsi>0){
+            zhoda = 1.0 * pocetZhodnych / kratsi;
+        }
+        
+        //System.out.println("zhoda = " + zhoda);
+        
+        return zhoda;
     }
+    
+    // nastavi pribuzne filmy k filmu movie
+    public static ArrayList<Integer> setRelatedMovies(ArrayList<Movie> movies, String title){
+        
+        ArrayList<Integer> rel = new ArrayList<>();
+        
+        Pattern pattern = Pattern.compile(".*" + title+ ".*", Pattern.CASE_INSENSITIVE);
+        Matcher matcher;
+        Movie mov;
+        
+        for (int i = 0; i < movies.size(); i++) {
+            mov = movies.get(i);
+            matcher = pattern.matcher(mov.getTitle());
+            
+            // nepridaj seba sameho ako pribuzny film
+            if(!mov.getTitle().equals(title)){
+                
+                // skus regex
+                if(matcher.find()){
+                    rel.add(i);
+                }
+                // ak zlyha regex, skus, ci je zhodnost nazvov >= 0.5
+                else{
+                    if(zhodnost(title, mov.getTitle()) >= 0.5){
+                        rel.add(i);
+                    }
+                }
+            }
+            
+        }
+                
+        return rel;
+    }
+    
+    /*
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+    */
     
     public static String postavaMeno(){
         int volba = nahoda.nextInt(17);
         String meno = "";
-     
-        switch (volba) {
-            case 0:
-                meno = faker.backToTheFuture().character();
-                break;
-
-            case 1:
-                meno = faker.buffy().characters();  // ma moznost celebrities
-                break;
-
-            case 2:
-                meno = faker.dragonBall().character();
-                break;
-
-            case 3:
-                meno = faker.friends().character();
-                break;
-
-            case 4:
-                meno = faker.gameOfThrones().character();
-                break;
-
-            case 5:
-                meno = faker.harryPotter().character();
-                break;
-
-            case 6:
-                meno = faker.hitchhikersGuideToTheGalaxy().character();
-                break;
-
-            case 7:
-                meno = faker.hobbit().character();
-                break;
-
-            case 8:
-                meno = faker.lebowski().character();    // ma actor
-                break;
-
-            case 9:
-                meno = faker.lordOfTheRings().character();
-                break;
-
-            case 10:
-                meno = faker.pokemon().name();
-                break;
-
-            case 11:
-                meno = faker.princessBride().character();
-                break;
-
-            case 12:
-                meno = faker.rickAndMorty().character();
-                break;
-
-            case 13:
-                meno = faker.starTrek().character();
-                break;
-
-            case 14:
-                meno = faker.witcher().character();
-                break;
-
-            case 15:
-                meno = faker.superhero().name();
-                break;
-
-            case 16:
-                meno = faker.zelda().character();
-                break;
-                
-            default:
-                throw new AssertionError();
-        }
+        meno = "Pre generovanie treba odkomentovat faker veci. Faker je spustitelny len v Maven/Gradle projekte kde treba pridat dependency";
+//        switch (volba) {
+//            case 0:
+//                meno = faker.backToTheFuture().character();
+//                break;
+//
+//            case 1:
+//                meno = faker.buffy().characters();  // ma moznost celebrities
+//                break;
+//
+//            case 2:
+//                meno = faker.dragonBall().character();
+//                break;
+//
+//            case 3:
+//                meno = faker.friends().character();
+//                break;
+//
+//            case 4:
+//                meno = faker.gameOfThrones().character();
+//                break;
+//
+//            case 5:
+//                meno = faker.harryPotter().character();
+//                break;
+//
+//            case 6:
+//                meno = faker.hitchhikersGuideToTheGalaxy().character();
+//                break;
+//
+//            case 7:
+//                meno = faker.hobbit().character();
+//                break;
+//
+//            case 8:
+//                meno = faker.lebowski().character();    // ma actor
+//                break;
+//
+//            case 9:
+//                meno = faker.lordOfTheRings().character();
+//                break;
+//
+//            case 10:
+//                meno = faker.pokemon().name();
+//                break;
+//
+//            case 11:
+//                meno = faker.princessBride().character();
+//                break;
+//
+//            case 12:
+//                meno = faker.rickAndMorty().character();
+//                break;
+//
+//            case 13:
+//                meno = faker.starTrek().character();
+//                break;
+//
+//            case 14:
+//                meno = faker.witcher().character();
+//                break;
+//
+//            case 15:
+//                meno = faker.superhero().name();
+//                break;
+//
+//            case 16:
+//                meno = faker.zelda().character();
+//                break;
+//                
+//            default:
+//                throw new AssertionError();
+//        }
         
         return meno;
     }
     
     public static String herecMeno(){   
-        return faker.funnyName().name();
+        return "Testovacie meno herca";//faker.funnyName().name();
     }
     
     public static void main(String[] args) {
@@ -160,7 +216,7 @@ public class Generator {
         String zaujimavost;
         
         ArrayList<VideoCharacter> postavy;
-        ArrayList<Movie> related;
+        ArrayList<Integer> related;
         
         short pocetEpizod;
         byte pocetSezon;
@@ -183,11 +239,11 @@ public class Generator {
             rok = (short) (nahoda.nextInt(52) + 1970);
             dlzka = (short)(nahoda.nextInt(121) + 80);
             
-            reziser = faker.artist().name();
+            reziser = "Testovacie meno rezisera";//faker.artist().name();
             
-            studio = faker.company().name();
+            studio = "Testovacie meno studia";//faker.company().name();
             
-            zaujimavost = faker.friends().quote();
+            zaujimavost = "Testovacia zaujimavost";//faker.friends().quote();
             
             // postavy vo filme - id, postava, herec
             for (int j = 0; j < pocetPostav; j++) {
@@ -203,12 +259,20 @@ public class Generator {
             );
                         
             Movie novyFilm = new Movie(nazov, zaner, dlzka, rok, studio, postavy, zaujimavost, hodnotenie, reziser, related);
-        
-            setRelatedMovies(filmy, novyFilm);
             
             filmy.add(novyFilm);
         }
         
+        // nastav pribuzne filmy
+        for (int j = 0; j < filmy.size(); j++) {
+            Movie movie = filmy.get(j);
+            
+            ArrayList<Integer> pribuzne = setRelatedMovies(filmy, movie.getTitle());
+            
+            for (int k = 0; k < pribuzne.size(); k++) {
+                movie.addRelated(pribuzne.get(k));
+            }
+        }
         
 
         i=0;
@@ -227,11 +291,11 @@ public class Generator {
             rok = (short) (nahoda.nextInt(52) + 1970);  // 1970 - 2021
             dlzka = (short)(nahoda.nextInt(121) + 80);  // 80 - 200 min
             
-            reziser = faker.artist().name();
+            reziser = "Testovacie meno rezisera";//faker.artist().name();
             
-            studio = faker.company().name();
+            studio = "Testovacie meno studia";//faker.company().name();
             
-            zaujimavost = faker.yoda().quote();
+            zaujimavost = "Testovacia zaujimavost";//faker.friends().quote();
             
             // postavy vo filme - id, postava, herec
             for (int j = 0; j < pocetPostav; j++) {
