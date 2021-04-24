@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <user>
+        <name>Dummy</name>
+        <username>Test Dummy</username>
+        <password>heslo</password>
+        <city>Bratislava</city>
+        <zip>12345</zip>
+        <address>Bratislava,Kramare 18</address>
+    </user>
+</users>
