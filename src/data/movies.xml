@@ -1,1 +1,825 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><movies><movie><id>0</id><title>Rambo</title><genre>war</genre><length>131</length><year>2009</year><studio>Jast-Fadel</studio><director>Cassatt</director><curiosity>I’m glad we’re having a rehearsal dinner. I rarely practice my meals before I eat.</curiosity><characters><id>0</id><characterName>Chaozu</characterName><actorName>Missy Sippy</actorName></characters><characters><id>1</id><characterName>Saruman the White</characterName><actorName>Herb E. Side</actorName></characters><characters><id>2</id><characterName>Owl</characterName><actorName>Ida Whana</actorName></characters><characters><id>3</id><characterName>Super Saiyan 2 Gohan</characterName><actorName>Howe D. Pardner</actorName></characters><characters><id>4</id><characterName>Darla</characterName><actorName>Sam Dayoulpay</actorName></characters><ratings><imdb>81</imdb><csfd>55</csfd><ours>1</ours></ratings></movie><movie><id>0</id><title>Rocky</title><genre>musical</genre><length>120</length><year>1986</year><studio>Krajcik, Ondricka and Shields</studio><director>Dali</director><curiosity>How you doin’?</curiosity><characters><id>0</id><characterName>Machop</characterName><actorName>Dusty Carr</actorName></characters><ratings><imdb>64</imdb><csfd>47</csfd><ours>88</ours></ratings></movie><movie><id>0</id><title>John Wick</title><genre>war</genre><length>120</length><year>2011</year><studio>Oberbrunner Inc</studio><director>Cezanne</director><curiosity>Until I was 25 I thought the only response to ‘I love you’ was ‘Oh crap!'</curiosity><characters><id>0</id><characterName>The Garbage Machine</characterName><actorName>Will Power</actorName></characters><characters><id>1</id><characterName>Chaozu</characterName><actorName>Val Lay</actorName></characters><characters><id>2</id><characterName>Pavel Chekov</characterName><actorName>Bart Ender</actorName></characters><characters><id>3</id><characterName>Deities</characterName><actorName>Jack Dupp</actorName></characters><ratings><imdb>17</imdb><csfd>14</csfd><ours>30</ours></ratings></movie><movie><id>0</id><title>John Wick Chapter 2</title><genre>war</genre><length>186</length><year>2002</year><studio>Adams Inc</studio><director>Escher</director><curiosity>If you want to receive emails about my upcoming shows please give me money so I can buy a computer.</curiosity><characters><id>0</id><characterName>The Big Lebowski</characterName><actorName>Therese R. Green</actorName></characters><characters><id>1</id><characterName>Anya Jenkins</characterName><actorName>Rob A. Bank</actorName></characters><characters><id>2</id><characterName>Buffy Summers</characterName><actorName>Justin Sane</actorName></characters><characters><id>3</id><characterName>Bunny Lebowski</characterName><actorName>May O'Nays</actorName></characters><ratings><imdb>54</imdb><csfd>8</csfd><ours>43</ours></ratings></movie><movie><id>0</id><title>Terminator</title><genre>horror</genre><length>164</length><year>2015</year><studio>Brakus LLC</studio><director>Picasso</director><curiosity>Je m’appelle Claude</curiosity><characters><id>0</id><characterName>Beverly Crusher</characterName><actorName>Zeke N. Yeshallfind</actorName></characters><characters><id>1</id><characterName>Zarquon</characterName><actorName>Dee Sember</actorName></characters><characters><id>2</id><characterName>Molly Weasley</characterName><actorName>Walter Melon</actorName></characters><characters><id>3</id><characterName>Polliver</characterName><actorName>Cal Seeium</actorName></characters><characters><id>4</id><characterName>Cousin Nicky</characterName><actorName>Reed Toomey</actorName></characters><characters><id>5</id><characterName>Bunny Lebowski</characterName><actorName>Cole Durkee</actorName></characters><characters><id>6</id><characterName>Emmeline Vance</characterName><actorName>Darryl Likt</actorName></characters><characters><id>7</id><characterName>Maude Lebowski</characterName><actorName>Jim Sox</actorName></characters><characters><id>8</id><characterName>Supah Flash Strike</characterName><actorName>Doug Witherspoon</actorName></characters><ratings><imdb>1</imdb><csfd>50</csfd><ours>75</ours></ratings></movie><movie><id>0</id><title>Scarface</title><genre>documentary</genre><length>142</length><year>2020</year><studio>King Group</studio><director>Kandinsky</director><curiosity>Joey doesn’t share food!</curiosity><characters><id>0</id><characterName>Biff Tannen</characterName><actorName>Eaton Wright</actorName></characters><characters><id>1</id><characterName>Unity</characterName><actorName>Phil A. Delphia</actorName></characters><characters><id>2</id><characterName>Elvis</characterName><actorName>Olive Green</actorName></characters><characters><id>3</id><characterName>Jackie Treehorn</characterName><actorName>Bob Ng</actorName></characters><characters><id>4</id><characterName>Brandt</characterName><actorName>Phil DeGrave</actorName></characters><characters><id>5</id><characterName>Weepinbell</characterName><actorName>Cal Efornia</actorName></characters><characters><id>6</id><characterName>Mark Robinson</characterName><actorName>Rocky Shore</actorName></characters><characters><id>7</id><characterName>Hylia</characterName><actorName>Rusty Keyes</actorName></characters><ratings><imdb>32</imdb><csfd>3</csfd><ours>57</ours></ratings></movie><movie><id>0</id><title>Rambo First Blood Part II</title><genre>documentary</genre><length>104</length><year>1983</year><studio>Harvey Inc</studio><director>Rubens</director><curiosity>Your collective dating record reads like a who’s who of human crap.</curiosity><characters><id>0</id><characterName>Rupert Giles</characterName><actorName>Robin Banks</actorName></characters><characters><id>1</id><characterName>Arthur Dent</characterName><actorName>Juan Nightstand</actorName></characters><characters><id>2</id><characterName>Pasta Fasta</characterName><actorName>Leo Tarred</actorName></characters><characters><id>3</id><characterName>Mr. Treeger</characterName><actorName>May Furst</actorName></characters><characters><id>4</id><characterName>The Dude</characterName><actorName>U. P. Freehly</actorName></characters><characters><id>5</id><characterName>Krypto IX</characterName><actorName>Joy Kil</actorName></characters><characters><id>6</id><characterName>Grunthos the Flatulent</characterName><actorName>Nick O'Time</actorName></characters><characters><id>7</id><characterName>Emily Saunders</characterName><actorName>Winnie Dipoo</actorName></characters><characters><id>8</id><characterName>Collio Quaynis</characterName><actorName>Wanda Rinn</actorName></characters><ratings><imdb>12</imdb><csfd>79</csfd><ours>41</ours></ratings></movie><movie><id>0</id><title>I, legend</title><genre>comedy</genre><length>116</length><year>2003</year><studio>Spinka-Welch</studio><director>Kandinsky</director><curiosity>I’m not someone who goes after a guy five minutes after he’s divorced.</curiosity><characters><id>0</id><characterName>The Big Lebowski</characterName><actorName>Penny Nichols</actorName></characters><characters><id>1</id><characterName>Robert Baratheon</characterName><actorName>Daisy Picking</actorName></characters><characters><id>2</id><characterName>Ori</characterName><actorName>Darryl Likt</actorName></characters><characters><id>3</id><characterName>Pumaag Nitae</characterName><actorName>Didi Reelydoit</actorName></characters><characters><id>4</id><characterName>Prince Humperdinck</characterName><actorName>Anna Sasin</actorName></characters><characters><id>5</id><characterName>Primeape</characterName><actorName>Sue Render</actorName></characters><ratings><imdb>98</imdb><csfd>78</csfd><ours>48</ours></ratings></movie><movie><id>0</id><title>Bad Boys</title><genre>documentary</genre><length>86</length><year>1992</year><studio>Hills Group</studio><director>Winslow Homer</director><curiosity>It was summer… and it was hot. Rachel was there… A lonely grey couch…”OH LOOK!” cried Ned, and then the kingdom was his forever. The End.</curiosity><characters><id>0</id><characterName>Mark Dixon</characterName><actorName>Harry R. M. Pitts</actorName></characters><characters><id>1</id><characterName>Darla</characterName><actorName>Tate Urtots</actorName></characters><ratings><imdb>47</imdb><csfd>30</csfd><ours>85</ours></ratings></movie><movie><id>0</id><title>Interstellar</title><genre>anime</genre><length>195</length><year>1994</year><studio>Wehner and Sons</studio><director>Chagall</director><curiosity>I’m not so good with the advice. Can I interest you in a sarcastic comment?</curiosity><characters><id>0</id><characterName>Krabby</characterName><actorName>Jerry Atrics</actorName></characters><characters><id>1</id><characterName>B'Elanna Torres</characterName><actorName>Rosa Shore</actorName></characters><ratings><imdb>56</imdb><csfd>45</csfd><ours>78</ours></ratings></movie><movie><id>0</id><title>Die Hard 2</title><genre>historic</genre><length>102</length><year>1985</year><studio>Lehner Group</studio><director>Ansel Adams</director><curiosity>You’ve been BAMBOOZLED!</curiosity><characters><id>0</id><characterName>Inigo Montoya</characterName><actorName>Annie Moore</actorName></characters><characters><id>1</id><characterName>Telma</characterName><actorName>Cody Pendant</actorName></characters><characters><id>2</id><characterName>Arabella Figg</characterName><actorName>Penny Lane</actorName></characters><ratings><imdb>26</imdb><csfd>64</csfd><ours>78</ours></ratings></movie><movie><id>0</id><title>Bad Boys 2</title><genre>comedy</genre><length>176</length><year>1989</year><studio>Satterfield, Boyer and Haag</studio><director>Klimt</director><curiosity>I'm Monica. I’m disgusting. I stalk guys and keep their underpants.</curiosity><characters><id>0</id><characterName>The Doctor</characterName><actorName>Bill Ding</actorName></characters><characters><id>1</id><characterName>The Countess</characterName><actorName>Gladys Eeya</actorName></characters><characters><id>2</id><characterName>Angel Girl</characterName><actorName>Marj Oram</actorName></characters><characters><id>3</id><characterName>Frankie and Benjy</characterName><actorName>Jasmine Flowers</actorName></characters><characters><id>4</id><characterName>Ethan Rayne</characterName><actorName>Mike Stand</actorName></characters><characters><id>5</id><characterName>Match</characterName><actorName>Rick Kleiner</actorName></characters><ratings><imdb>38</imdb><csfd>64</csfd><ours>90</ours></ratings></movie><movie><id>0</id><title>21 Jump Street</title><genre>real-based</genre><length>121</length><year>1999</year><studio>Beahan, Rutherford and Durgan</studio><director>Pollock</director><curiosity>Oh, are you setting Ross up with someone? Does she have a wedding dress?</curiosity><characters><id>0</id><characterName>Zarquon</characterName><actorName>Jack Dupp</actorName></characters><characters><id>1</id><characterName>Rufus Scrimgeour</characterName><actorName>Danielle Soloud</actorName></characters><characters><id>2</id><characterName>Android 19</characterName><actorName>Kenny Penny</actorName></characters><characters><id>3</id><characterName>Dave McFly</characterName><actorName>Rita Story</actorName></characters><characters><id>4</id><characterName>Pan</characterName><actorName>Roger Overandout</actorName></characters><ratings><imdb>73</imdb><csfd>92</csfd><ours>90</ours></ratings></movie><movie><id>0</id><title>Big Lebowski</title><genre>romantic</genre><length>110</length><year>1988</year><studio>Runte Inc</studio><director>Bernini</director><curiosity>Oh, my God! If you say that one more time, I’m going to break up with you!</curiosity><characters><id>0</id><characterName>Shibo</characterName><actorName>Raney Schauer</actorName></characters><characters><id>1</id><characterName>Wate</characterName><actorName>Rich Kidd</actorName></characters><characters><id>2</id><characterName>Haggon</characterName><actorName>Eve O'Lution</actorName></characters><ratings><imdb>73</imdb><csfd>61</csfd><ours>38</ours></ratings></movie><movie><id>0</id><title>Batman</title><genre>action</genre><length>82</length><year>1996</year><studio>Wilkinson LLC</studio><director>Edward Hopper</director><curiosity>Oh, are you setting Ross up with someone? Does she have a wedding dress?</curiosity><characters><id>0</id><characterName>Queen Bella</characterName><actorName>Evans Gayte</actorName></characters><characters><id>1</id><characterName>Abra</characterName><actorName>Jack Tupp</actorName></characters><characters><id>2</id><characterName>Adam Pangratt</characterName><actorName>Kristie Hannity</actorName></characters><characters><id>3</id><characterName>Corlys Velaryon</characterName><actorName>Mel Loewe</actorName></characters><characters><id>4</id><characterName>Zubat</characterName><actorName>Dale E. Bread</actorName></characters><characters><id>5</id><characterName>Bantam</characterName><actorName>Annie Buddyhome</actorName></characters><characters><id>6</id><characterName>Treebeard</characterName><actorName>Rusty Fossat</actorName></characters><ratings><imdb>66</imdb><csfd>43</csfd><ours>17</ours></ratings></movie><movie><id>0</id><title>Spiderman</title><genre>musical</genre><length>107</length><year>1976</year><studio>Ziemann-Steuber</studio><director>Renoir</director><curiosity>All right, look if you absolutely have to tell her the truth, at least wait until the timing’s right. And that’s what deathbeds are for.</curiosity><characters><id>0</id><characterName>Maria Louisa La Valette</characterName><actorName>Bonnie Ann Clyde</actorName></characters><characters><id>1</id><characterName>Medigoron</characterName><actorName>Alex Blaine Layder</actorName></characters><ratings><imdb>14</imdb><csfd>62</csfd><ours>81</ours></ratings></movie><movie><id>0</id><title>Man of Steel</title><genre>historic</genre><length>164</length><year>1980</year><studio>Mitchell Group</studio><director>Gauguin</director><curiosity>We were on a break!</curiosity><characters><id>0</id><characterName>Percy</characterName><actorName>Chris Coe</actorName></characters><characters><id>1</id><characterName>The Countess</characterName><actorName>Howard I. No</actorName></characters><characters><id>2</id><characterName>Dark Goblin Queen Eyes</characterName><actorName>Heather N. Yonn</actorName></characters><ratings><imdb>3</imdb><csfd>62</csfd><ours>41</ours></ratings></movie><movie><id>0</id><title>Batman v Superman</title><genre>western</genre><length>135</length><year>1983</year><studio>Kirlin-Conn</studio><director>Manet</director><curiosity>A hundred million people went to see a movie about what I do. I wonder how many people would go see a movie called Jurassic Parka. No, no, no, a bunch of out-of-control jackets take over an island!</curiosity><characters><id>0</id><characterName>Shadowfax</characterName><actorName>Kitty Katz</actorName></characters><characters><id>1</id><characterName>Shrimply Pibbles</characterName><actorName>Sonny Day</actorName></characters><characters><id>2</id><characterName>The Dude</characterName><actorName>Diane Toluvia</actorName></characters><characters><id>3</id><characterName>Marty McFly</characterName><actorName>Tyrone Shoes</actorName></characters><characters><id>4</id><characterName>Vincent Crabbe</characterName><actorName>Ginger Vitis</actorName></characters><characters><id>5</id><characterName>Sandy</characterName><actorName>Kareem O'Weet</actorName></characters><characters><id>6</id><characterName>Old Men</characterName><actorName>Pearl E. Gates</actorName></characters><ratings><imdb>96</imdb><csfd>60</csfd><ours>39</ours></ratings></movie><movie><id>0</id><title>Justice League</title><genre>animation</genre><length>106</length><year>1990</year><studio>Nicolas, Zemlak and Koelpin</studio><director>Kahlo</director><curiosity>Your teeth? Yeah, I saw them from outside.</curiosity><characters><id>0</id><characterName>Ursula Buffay</characterName><actorName>Ida Whana</actorName></characters><ratings><imdb>6</imdb><csfd>2</csfd><ours>63</ours></ratings></movie><movie><id>0</id><title>Avengers</title><genre>real-based</genre><length>194</length><year>1984</year><studio>Quigley, Bartell and Armstrong</studio><director>Durer</director><curiosity>I’m not so good with the advice. Can I interest you in a sarcastic comment?</curiosity><characters><id>0</id><characterName>Mr. Poopybutthole</characterName><actorName>Terry Achey</actorName></characters><characters><id>1</id><characterName>Smaug</characterName><actorName>Anna Conda</actorName></characters><characters><id>2</id><characterName>Malcolm Reed</characterName><actorName>Adam Zapel</actorName></characters><ratings><imdb>97</imdb><csfd>11</csfd><ours>39</ours></ratings></movie></movies>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><movies>
+    <movie>
+        <id>0</id>
+        <title>Rambo</title>
+        <genre>anime</genre>
+        <length>123</length>
+        <year>1970</year>
+        <studio>Stokes-Hansen</studio>
+        <director>Joan Miro</director>
+        <curiosity>I’m glad we’re having a rehearsal dinner. I rarely practice my meals before I eat.</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Mr. Popo</characterName>
+            <actorName>Dan Druff</actorName>
+        </characters>
+        <ratings>
+            <imdb>28</imdb>
+            <csfd>43</csfd>
+            <ours>58</ours>
+        </ratings>
+        <relatedIndices>6</relatedIndices>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Rocky</title>
+        <genre>historic</genre>
+        <length>156</length>
+        <year>2018</year>
+        <studio>Fahey-Wyman</studio>
+        <director>Manet</director>
+        <curiosity>Could I BE wearing any more clothes?</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Hotblack Desiato's bodyguard</characterName>
+            <actorName>Sam Urai</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Beorn</characterName>
+            <actorName>Al B. Tross</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Sarnori</characterName>
+            <actorName>Ima Hogg</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Phouchg</characterName>
+            <actorName>Lisa Neucar</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>King Lotharon</characterName>
+            <actorName>Lowden Clear</actorName>
+        </characters>
+        <ratings>
+            <imdb>49</imdb>
+            <csfd>59</csfd>
+            <ours>68</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>John Wick</title>
+        <genre>anime</genre>
+        <length>94</length>
+        <year>2017</year>
+        <studio>Spencer and Sons</studio>
+        <director>Magritte</director>
+        <curiosity>Raspberries? Good. Ladyfingers? Good. Beef? GOOD!</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Jan Michael Vincent</characterName>
+            <actorName>Bud Weiser</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Jyana</characterName>
+            <actorName>Dinah Soares</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Walrus</characterName>
+            <actorName>Liv Long</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Triton Spirit</characterName>
+            <actorName>Jade Stone</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>Marvin</characterName>
+            <actorName>Kenney C. Strait</actorName>
+        </characters>
+        <ratings>
+            <imdb>54</imdb>
+            <csfd>48</csfd>
+            <ours>51</ours>
+        </ratings>
+        <relatedIndices>3</relatedIndices>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>John Wick 2</title>
+        <genre>romantic</genre>
+        <length>168</length>
+        <year>2003</year>
+        <studio>Heathcote Group</studio>
+        <director>Kandinsky</director>
+        <curiosity>It was summer… and it was hot. Rachel was there… A lonely grey couch…”OH LOOK!” cried Ned, and then the kingdom was his forever. The End.</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Buttercup</characterName>
+            <actorName>Sharon A. Burger</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Ori</characterName>
+            <actorName>Herbie Voor</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Rupert Giles</characterName>
+            <actorName>Skip Stone</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Morfin Gaunt</characterName>
+            <actorName>Rusty Steele</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>The Big Lebowski</characterName>
+            <actorName>Jim Sox</actorName>
+        </characters>
+        <characters>
+            <id>5</id>
+            <characterName>Saruman the White</characterName>
+            <actorName>Jed Dye</actorName>
+        </characters>
+        <characters>
+            <id>6</id>
+            <characterName>Zarquon</characterName>
+            <actorName>Father A. Long</actorName>
+        </characters>
+        <characters>
+            <id>7</id>
+            <characterName>Merlon Crakehall</characterName>
+            <actorName>Abe Rudder</actorName>
+        </characters>
+        <characters>
+            <id>8</id>
+            <characterName>Prince Humperdinck</characterName>
+            <actorName>Rocky Shore</actorName>
+        </characters>
+        <ratings>
+            <imdb>40</imdb>
+            <csfd>90</csfd>
+            <ours>96</ours>
+        </ratings>
+        <relatedIndices>2</relatedIndices>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Terminator</title>
+        <genre>documentary</genre>
+        <length>143</length>
+        <year>1975</year>
+        <studio>Larkin, Schamberger and Schowalter</studio>
+        <director>Cassatt</director>
+        <curiosity>No. Interestingly enough, her leaf blower picked up.</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Geordi La Forge</characterName>
+            <actorName>Elmer Sklue</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Jonathan Archer</characterName>
+            <actorName>Jim Sox</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Bombur</characterName>
+            <actorName>Rocky Shore</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Brandt</characterName>
+            <actorName>Barry D'Alive</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>Barry Manilow</characterName>
+            <actorName>Ethel L. Cahall</actorName>
+        </characters>
+        <characters>
+            <id>5</id>
+            <characterName>Boromir</characterName>
+            <actorName>Evan Lee Arps</actorName>
+        </characters>
+        <characters>
+            <id>6</id>
+            <characterName>Filius Flitwick</characterName>
+            <actorName>E. Ville</actorName>
+        </characters>
+        <ratings>
+            <imdb>27</imdb>
+            <csfd>21</csfd>
+            <ours>54</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Scarface</title>
+        <genre>historic</genre>
+        <length>199</length>
+        <year>1989</year>
+        <studio>Koss-Russel</studio>
+        <director>Seurat</director>
+        <curiosity>Sure I peed on her. And if I had to, I’d pee on any one of you!</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Lighthouse Chief</characterName>
+            <actorName>Harry Beard</actorName>
+        </characters>
+        <ratings>
+            <imdb>74</imdb>
+            <csfd>85</csfd>
+            <ours>81</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Rambo II</title>
+        <genre>action</genre>
+        <length>94</length>
+        <year>1979</year>
+        <studio>Cruickshank-Strosin</studio>
+        <director>Warhol</director>
+        <curiosity>What’s not to like? Custard – good. Jam – good. Meat – good!</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Colin the Security Robot</characterName>
+            <actorName>May Day</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Jackie Treehorn</characterName>
+            <actorName>Andy Gravity</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Théoden</characterName>
+            <actorName>Brock Lee</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Smaug</characterName>
+            <actorName>Moe DeLawn</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>Waldon Wynch</characterName>
+            <actorName>Bob Frapples</actorName>
+        </characters>
+        <characters>
+            <id>5</id>
+            <characterName>Gag Halfrunt</characterName>
+            <actorName>Gil T. Azell</actorName>
+        </characters>
+        <characters>
+            <id>6</id>
+            <characterName>Aelirenn</characterName>
+            <actorName>Ryan Coke</actorName>
+        </characters>
+        <ratings>
+            <imdb>51</imdb>
+            <csfd>2</csfd>
+            <ours>28</ours>
+        </ratings>
+        <relatedIndices>0</relatedIndices>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>I, legend</title>
+        <genre>horror</genre>
+        <length>165</length>
+        <year>2011</year>
+        <studio>Deckow, Schimmel and Kertzmann</studio>
+        <director>Michelangelo</director>
+        <curiosity>First divorce: wife’s hidden sexuality, not my fault. Second divorce: said the wrong name at the altar, kind of my fault. Third divorce: they shouldn’t let you get married when you’re that drunk and have stuff drawn all over your face, Nevada’s fault.</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Puar</characterName>
+            <actorName>Joy Rider</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Zapdos</characterName>
+            <actorName>Alec Tricity</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>The Dude</characterName>
+            <actorName>Clara Sabell</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Penelope Clearwater</characterName>
+            <actorName>Douglas S. Halfempty</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>Arthricia</characterName>
+            <actorName>Gladys Eeya</actorName>
+        </characters>
+        <ratings>
+            <imdb>72</imdb>
+            <csfd>73</csfd>
+            <ours>79</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Bad Boys</title>
+        <genre>drama</genre>
+        <length>157</length>
+        <year>1971</year>
+        <studio>West Group</studio>
+        <director>Picasso</director>
+        <curiosity>You could not be any more wrong. You could try, but you would not be successful.</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Stockwell</characterName>
+            <actorName>Al B. Zienya</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Spock</characterName>
+            <actorName>Andy Friese</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Elder Kai</characterName>
+            <actorName>Lowden Clear</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Effrafax of Wug</characterName>
+            <actorName>Sal Minella</actorName>
+        </characters>
+        <ratings>
+            <imdb>63</imdb>
+            <csfd>21</csfd>
+            <ours>21</ours>
+        </ratings>
+        <relatedIndices>11</relatedIndices>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Interstellar</title>
+        <genre>action</genre>
+        <length>184</length>
+        <year>2006</year>
+        <studio>Kozey, Gutkowski and Graham</studio>
+        <director>Caravaggio</director>
+        <curiosity>I’m not so good with the advice. Can I interest you in a sarcastic comment?</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Mila and her father</characterName>
+            <actorName>Emerald Stone</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>T'Pol</characterName>
+            <actorName>Aretha Holly</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Squanchy</characterName>
+            <actorName>Mel Practiss</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Polaris Woman</characterName>
+            <actorName>Jan U. Wharry</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>Tanton Fossoway</characterName>
+            <actorName>Mark A. Roni</actorName>
+        </characters>
+        <characters>
+            <id>5</id>
+            <characterName>Spike</characterName>
+            <actorName>Ginger Vitis</actorName>
+        </characters>
+        <characters>
+            <id>6</id>
+            <characterName>King Lotharon</characterName>
+            <actorName>Rory Storm</actorName>
+        </characters>
+        <characters>
+            <id>7</id>
+            <characterName>Vegito</characterName>
+            <actorName>Rich Mann</actorName>
+        </characters>
+        <characters>
+            <id>8</id>
+            <characterName>Walden Macnair</characterName>
+            <actorName>Ann Tartica</actorName>
+        </characters>
+        <ratings>
+            <imdb>73</imdb>
+            <csfd>34</csfd>
+            <ours>44</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Die Hard 2</title>
+        <genre>romantic</genre>
+        <length>84</length>
+        <year>1988</year>
+        <studio>Gorczany-Donnelly</studio>
+        <director>Diego Rivera</director>
+        <curiosity>Joey doesn’t share food!</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Jonathan Levinson</characterName>
+            <actorName>Mike Stand</actorName>
+        </characters>
+        <ratings>
+            <imdb>4</imdb>
+            <csfd>91</csfd>
+            <ours>56</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Bad Boys 2</title>
+        <genre>action</genre>
+        <length>195</length>
+        <year>2013</year>
+        <studio>Hackett-Doyle</studio>
+        <director>Paul Klee</director>
+        <curiosity>I'm Monica. I’m disgusting. I stalk guys and keep their underpants.</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Majin Vegeta</characterName>
+            <actorName>Rusty Irons</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Melaquin</characterName>
+            <actorName>Owen Big</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Groot</characterName>
+            <actorName>Noah Lott</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>The Necromancer</characterName>
+            <actorName>Sherman Wadd Evver</actorName>
+        </characters>
+        <ratings>
+            <imdb>40</imdb>
+            <csfd>41</csfd>
+            <ours>52</ours>
+        </ratings>
+        <relatedIndices>8</relatedIndices>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>21 Jump Street</title>
+        <genre>romantic</genre>
+        <length>180</length>
+        <year>2010</year>
+        <studio>Torp, Emard and Hudson</studio>
+        <director>Renoir</director>
+        <curiosity>Shut up! Shut up! Shut up!</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Bombur</characterName>
+            <actorName>Ray Zenz</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Loonquawl and Phouchg</characterName>
+            <actorName>Ted E. Baer</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Triplicate Strange</characterName>
+            <actorName>Jack Pott</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Baby</characterName>
+            <actorName>Jay Walker</actorName>
+        </characters>
+        <ratings>
+            <imdb>53</imdb>
+            <csfd>17</csfd>
+            <ours>51</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Big Lebowski</title>
+        <genre>horror</genre>
+        <length>189</length>
+        <year>1993</year>
+        <studio>Ziemann Inc</studio>
+        <director>Rothko</director>
+        <curiosity>Welcome to the real world. It sucks. You’re gonna love it!</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Jonathan Levinson</characterName>
+            <actorName>Rosa Shore</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Willow Rosenberg</characterName>
+            <actorName>Jed Dye</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Yellin</characterName>
+            <actorName>Anna Prentice</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Spike</characterName>
+            <actorName>Oliver Sutton</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>Queen Ambi</characterName>
+            <actorName>Jim Shu</actorName>
+        </characters>
+        <characters>
+            <id>5</id>
+            <characterName>Tammy Gueterman</characterName>
+            <actorName>Otto B. Kilt</actorName>
+        </characters>
+        <ratings>
+            <imdb>84</imdb>
+            <csfd>59</csfd>
+            <ours>29</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Batman</title>
+        <genre>animation</genre>
+        <length>127</length>
+        <year>1984</year>
+        <studio>Roob Group</studio>
+        <director>Warhol</director>
+        <curiosity>You’ve been BAMBOOZLED!</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>The Bloody Baron</characterName>
+            <actorName>Frank Furter</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Phlox</characterName>
+            <actorName>Olive Green</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Mr Husk</characterName>
+            <actorName>Brighton Early</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Ekans</characterName>
+            <actorName>Helen Highwater</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>Garrick Ollivander</characterName>
+            <actorName>Xavier Breath</actorName>
+        </characters>
+        <characters>
+            <id>5</id>
+            <characterName>Crookshanks</characterName>
+            <actorName>Armand Hammer</actorName>
+        </characters>
+        <characters>
+            <id>6</id>
+            <characterName>Westley</characterName>
+            <actorName>Carson O. Gin</actorName>
+        </characters>
+        <characters>
+            <id>7</id>
+            <characterName>Yennefer of Vengerberg</characterName>
+            <actorName>Pepe Roni</actorName>
+        </characters>
+        <ratings>
+            <imdb>67</imdb>
+            <csfd>58</csfd>
+            <ours>11</ours>
+        </ratings>
+        <relatedIndices>17</relatedIndices>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Spiderman</title>
+        <genre>historic</genre>
+        <length>129</length>
+        <year>1971</year>
+        <studio>Kuphal, Bruen and Olson</studio>
+        <director>Rothko</director>
+        <curiosity>What’s not to like? Custard – good. Jam – good. Meat – good!</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Galadriel</characterName>
+            <actorName>Brook Lynn Bridge</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Kira Nerys</characterName>
+            <actorName>Andy Friese</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>The Countess</characterName>
+            <actorName>Daisy Picking</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Shiro</characterName>
+            <actorName>Juan Morefore DeRhode</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>Willow Rosenberg</characterName>
+            <actorName>Winsom Cash</actorName>
+        </characters>
+        <ratings>
+            <imdb>11</imdb>
+            <csfd>42</csfd>
+            <ours>81</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Man of Steel</title>
+        <genre>documentary</genre>
+        <length>96</length>
+        <year>2009</year>
+        <studio>Willms, Stiedemann and Mraz</studio>
+        <director>Cassatt</director>
+        <curiosity>If you want to receive emails about my upcoming shows please give me money so I can buy a computer.</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Magorian</characterName>
+            <actorName>Barb Dwyer</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Golem</characterName>
+            <actorName>Mary Gold</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Walter Sobchak</characterName>
+            <actorName>Easton West</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Goldie Wilson</characterName>
+            <actorName>Joaquin DeFlores</actorName>
+        </characters>
+        <ratings>
+            <imdb>91</imdb>
+            <csfd>53</csfd>
+            <ours>4</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Batman v Superman</title>
+        <genre>anime</genre>
+        <length>137</length>
+        <year>2005</year>
+        <studio>Hermann, Hahn and Farrell</studio>
+        <director>Titian</director>
+        <curiosity>Hey buddy, this is a family place. Put the mouse back in the house.</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Biff Tannen</characterName>
+            <actorName>Chris P. Bacon</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Marvin Berry</characterName>
+            <actorName>Annie Buddyhome</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Revolio 'Gearhead' Clockberg, Jr.</characterName>
+            <actorName>Mandy Lifeboats</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>Champa</characterName>
+            <actorName>Lake Speed</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>Revolio 'Gearhead' Clockberg, Jr.</characterName>
+            <actorName>Harry Chest</actorName>
+        </characters>
+        <characters>
+            <id>5</id>
+            <characterName>Jaco</characterName>
+            <actorName>Minnie Skurt</actorName>
+        </characters>
+        <characters>
+            <id>6</id>
+            <characterName>Jennifer Parker</characterName>
+            <actorName>Polly Dent</actorName>
+        </characters>
+        <ratings>
+            <imdb>1</imdb>
+            <csfd>22</csfd>
+            <ours>44</ours>
+        </ratings>
+        <relatedIndices>14</relatedIndices>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Justice League</title>
+        <genre>horror</genre>
+        <length>87</length>
+        <year>2011</year>
+        <studio>Schimmel, Pagac and Krajcik</studio>
+        <director>Rothko</director>
+        <curiosity>Well, maybe he was nervous.</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Illustrious Juggernaut the Fated</characterName>
+            <actorName>Sue Render</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>Nappa</characterName>
+            <actorName>Colette A. Day</actorName>
+        </characters>
+        <ratings>
+            <imdb>52</imdb>
+            <csfd>82</csfd>
+            <ours>55</ours>
+        </ratings>
+    </movie>
+    <movie>
+        <id>0</id>
+        <title>Avengers</title>
+        <genre>western</genre>
+        <length>168</length>
+        <year>1975</year>
+        <studio>O'Keefe-Macejkovic</studio>
+        <director>Ansel Adams</director>
+        <curiosity>Je m’appelle Claude</curiosity>
+        <characters>
+            <id>0</id>
+            <characterName>Arthur Philip Deodat</characterName>
+            <actorName>Rusty Irons</actorName>
+        </characters>
+        <characters>
+            <id>1</id>
+            <characterName>George McFly</characterName>
+            <actorName>Sam Dayoulpay</actorName>
+        </characters>
+        <characters>
+            <id>2</id>
+            <characterName>Jackie Treehorn</characterName>
+            <actorName>Bob Ng</actorName>
+        </characters>
+        <characters>
+            <id>3</id>
+            <characterName>The Big Lebowski</characterName>
+            <actorName>Anita Knapp</actorName>
+        </characters>
+        <characters>
+            <id>4</id>
+            <characterName>Everard</characterName>
+            <actorName>Gil T. Azell</actorName>
+        </characters>
+        <characters>
+            <id>5</id>
+            <characterName>Dread Pirate Roberts</characterName>
+            <actorName>Tom Katz</actorName>
+        </characters>
+        <characters>
+            <id>6</id>
+            <characterName>Aerodactyl</characterName>
+            <actorName>Leigh King</actorName>
+        </characters>
+        <characters>
+            <id>7</id>
+            <characterName>Emily Saunders</characterName>
+            <actorName>Robin Meeblind</actorName>
+        </characters>
+        <characters>
+            <id>8</id>
+            <characterName>Kathy</characterName>
+            <actorName>Jack Dupp</actorName>
+        </characters>
+        <ratings>
+            <imdb>32</imdb>
+            <csfd>31</csfd>
+            <ours>52</ours>
+        </ratings>
+    </movie>
+</movies>
