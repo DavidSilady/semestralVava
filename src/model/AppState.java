@@ -1,15 +1,24 @@
 package model;
 
 import java.util.ArrayList;
+import xml_io_manager.XML_ReadWrite;
 
 public class AppState {
     private static AppState instance = null;
     private static final Boolean DEBUG = true;
     private AppState() {
-        this.users = new ArrayList<>();
+        //this.users = new ArrayList<>();
+        Users usrs = (Users) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPUSERS).read("src\\data\\users.xml");
+        Movies mvs = (Movies) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPMOVIES).read("src\\data\\movies.xml");
+        TVShows tvs = (TVShows) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPTVSHOWS).read("src\\data\\tvshows.xml");
+        this.users = usrs.getUsers();
+        this.movies = mvs.getFilmy();
+        this.tvshows = tvs.getSerialy();
     };
 
     private ArrayList<User> users;
+    private ArrayList<Movie> movies;
+    private ArrayList<TVShow> tvshows;
 
     private User activeUser;
 
