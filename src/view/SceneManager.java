@@ -53,7 +53,7 @@ public class SceneManager {
         return fxmlLoader;
     }
 
-    public static FXMLLoader switchScene (javafx.event.ActionEvent actionEvent, String sceneName) throws Exception{
+    public static FXMLLoader switchScene (Event actionEvent, String sceneName) throws Exception{
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(SceneManager.class.getResource("/view/template/" + sceneName + ".fxml"));
         Parent root = fxmlLoader.load();

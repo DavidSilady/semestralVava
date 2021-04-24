@@ -9,7 +9,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         SceneManager.getInstance().setAppName("IMD-Beta");
-        SceneManager.createApp(primaryStage, "loginPage", 1165, 720);
+        SceneManager.createApp(primaryStage, "mainPage", 1165, 720);
         AppState.debug("TEST");
     }
 

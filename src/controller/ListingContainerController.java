@@ -63,7 +63,7 @@ public class ListingContainerController extends Controller {
 
             FXMLLoader fxmlLoader = SceneManager.switchDynamicPane(listingPane, itemTemplateName);
             ListablePaneController controller = fxmlLoader.getController();
-            controller.init(item, this);
+            controller.fillData(item, this);
             listingPanes.add(listingPane);
         }
 

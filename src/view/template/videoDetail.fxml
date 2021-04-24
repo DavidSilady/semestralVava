@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1165.0" style="-fx-background-color: white;" stylesheets="/view/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VideoDetailController">
+   <children>
+      <Label fx:id="titleLabel" layoutX="28.0" text="Title" textFill="#ef5350">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Text fx:id="typeText" fill="#e57373" layoutX="28.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type  | Ganre">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="yearText" fill="#e57373" layoutX="265.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="lengthText" fill="#e57373" layoutX="393.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Length">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="studioText" fill="#e57373" layoutX="564.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e57373" layoutX="28.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rating">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="ratingText" layoutX="29.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" wrappingWidth="82.9296875" />
+      <Text fill="#e57373" layoutX="28.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Director">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="directorText" layoutX="28.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum" wrappingWidth="69.30178225040436" />
+      <Text fill="#e57373" layoutX="28.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Curiosity">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="curiosityText" layoutX="28.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum" wrappingWidth="608.9296875" />
+      <AnchorPane fx:id="charactersPane" layoutX="768.0" layoutY="69.0" prefHeight="548.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" />
+      <Label fx:id="recommendedLabel" layoutX="767.0" layoutY="43.0" text="Characters" textFill="#ef5350">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="reviewsPane" layoutX="29.0" layoutY="317.0" prefHeight="190.0" prefWidth="720.0" style="-fx-background-color: #EF5350;" />
+      <Label fx:id="recommendedLabel1" layoutX="28.0" layoutY="291.0" text="Reviews" textFill="#ef5350">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="newReviewTextArea" layoutX="29.0" layoutY="507.0" prefHeight="73.0" prefWidth="720.0" />
+      <Button fx:id="addReviewButton" layoutX="30.0" layoutY="580.0" mnemonicParsing="false" onAction="#addReview" prefHeight="38.0" prefWidth="134.0" text="Add Review" />
+      <Slider fx:id="reviewRatingSlider" layoutX="180.0" layoutY="582.0" max="10.0" showTickLabels="true" showTickMarks="true" style="-fx-control-inner-background: #E57373;" value="5.0" />
+   </children>
+</AnchorPane>
