@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import model.User;
 import model.interfaces.Listable;
 import view.SceneManager;
 
@@ -49,6 +50,13 @@ public class HomePaneController extends Controller {
         recommendedPaneController.setParameters(370, 240);
 
         // TODO: get list from model and populate
+        ArrayList<Listable> list = new ArrayList<>();
+        list.add(new User());
+        list.add(new User());
+        list.add(new User());
+        list.add(new User());
+        list.add(new User());
+        populateList(recommendedPaneController, list, "videoListingSmall");
     }
 
     private void setupMostViewedPane() throws Exception {
@@ -57,6 +65,10 @@ public class HomePaneController extends Controller {
         mostViewedPaneController.setParameters(370, 240);
 
         // TODO: get list from model and populate
+        ArrayList<Listable> list = new ArrayList<>();
+        list.add(new User());
+        list.add(new User());
+        populateList(mostViewedPaneController, list, "videoListingSmall");
     }
 
     private void setupNewReleasesPane() throws Exception {
@@ -65,6 +77,10 @@ public class HomePaneController extends Controller {
         newReleasesPaneController.setParameters(760, 557);
 
         // TODO: get list from model and populate
+        ArrayList<Listable> list = new ArrayList<>();
+        list.add(new User());
+        list.add(new User());
+        populateList(newReleasesPaneController, list, "videoListingSmall");
     }
 
     private void populateList(ListingContainerController controller, ArrayList<Listable> list, String listingName) throws Exception {
