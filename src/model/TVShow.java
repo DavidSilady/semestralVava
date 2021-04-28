@@ -47,6 +47,9 @@ public class TVShow extends Video{
     public String toString() {
         return "TVShow{" + super.toString() + "seasonCount=" + seasonCount + ", episodeCount=" + episodeCount + '}';
     }
-    
-    
+
+    @Override
+    public String getType() {
+        return "TV Show";
+    }
 }

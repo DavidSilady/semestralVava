@@ -28,6 +28,36 @@ public class AppState {
         }
     }
 
+    public ArrayList<Video> getVideos() {
+        ArrayList<Video> connectedList = new ArrayList<>(movies);
+        connectedList.addAll(tvshows);
+        return connectedList;
+    }
+
+    public ArrayList<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(ArrayList<User> users) {
+        this.users = users;
+    }
+
+    public ArrayList<Movie> getMovies() {
+        return movies;
+    }
+
+    public void setMovies(ArrayList<Movie> movies) {
+        this.movies = movies;
+    }
+
+    public ArrayList<TVShow> getTvshows() {
+        return tvshows;
+    }
+
+    public void setTvshows(ArrayList<TVShow> tvshows) {
+        this.tvshows = tvshows;
+    }
+
     public User getActiveUser() {
         return activeUser;
     }

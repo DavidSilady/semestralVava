@@ -5,6 +5,8 @@
  */
 package model;
 
+import model.interfaces.Listable;
+
 import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,7 +16,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
  * @author adamg
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-public abstract class Video {
+public abstract class Video implements Listable {
     
     private final static byte CSFD = 1;
     private final static byte IMDB = 2;
@@ -125,6 +127,10 @@ public abstract class Video {
         this.reviews = reviews;
     }
 
+    public int getNumberOfReviews() {
+        return this.reviews.size();
+    }
+
     public void addReview(Review review) {
         this.reviews.add(review);
         
@@ -179,12 +185,15 @@ public abstract class Video {
         this.curiosity = curiosity;
         this.ratings = ratings;
         this.director = director;
+        this.reviews = new ArrayList<>();
     }
 
     public Video() {
     }
-    
-    
+
+    public String getType() {
+        return "";
+    }
 
     @Override
     public String toString() {

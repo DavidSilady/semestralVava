@@ -6,12 +6,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import model.AppState;
 import model.User;
+import model.Video;
 import model.interfaces.Listable;
 import view.SceneManager;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class HomePaneController extends Controller {
@@ -50,13 +54,9 @@ public class HomePaneController extends Controller {
         recommendedPaneController.setParameters(370, 240);
 
         // TODO: get list from model and populate
-        ArrayList<Listable> list = new ArrayList<>();
-        list.add(new User());
-        list.add(new User());
-        list.add(new User());
-        list.add(new User());
-        list.add(new User());
-        populateList(recommendedPaneController, list, "videoListingSmall");
+        ArrayList<Video> list = new ArrayList<>(AppState.getInstance().getVideos());
+        list = ContentFilter.pickContent(list, (byte) 7, 10);
+        populateList(recommendedPaneController, new ArrayList<>(list), "videoListingSmall");
     }
 
     private void setupMostViewedPane() throws Exception {
@@ -65,10 +65,9 @@ public class HomePaneController extends Controller {
         mostViewedPaneController.setParameters(370, 240);
 
         // TODO: get list from model and populate
-        ArrayList<Listable> list = new ArrayList<>();
-        list.add(new User());
-        list.add(new User());
-        populateList(mostViewedPaneController, list, "videoListingSmall");
+        ArrayList<Video> list = new ArrayList<>(AppState.getInstance().getVideos());
+        list = ContentFilter.pickMostPopular(list, 10);
+        populateList(mostViewedPaneController, new ArrayList<>(list), "videoListingSmall");
     }
 
     private void setupNewReleasesPane() throws Exception {
@@ -77,10 +76,9 @@ public class HomePaneController extends Controller {
         newReleasesPaneController.setParameters(760, 557);
 
         // TODO: get list from model and populate
-        ArrayList<Listable> list = new ArrayList<>();
-        list.add(new User());
-        list.add(new User());
-        populateList(newReleasesPaneController, list, "videoListingSmall");
+        ArrayList<Video> list = new ArrayList<>(AppState.getInstance().getVideos());
+        list = ContentFilter.pickContent(list, Calendar.getInstance().get(Calendar.YEAR) - 1, 10);
+        populateList(newReleasesPaneController, new ArrayList<>(list), "videoListingSmall");
     }
 
     private void populateList(ListingContainerController controller, ArrayList<Listable> list, String listingName) throws Exception {

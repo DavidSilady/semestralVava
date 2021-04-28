@@ -8,8 +8,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import model.AppState;
+import model.Video;
 import model.interfaces.Listable;
 import view.SceneManager;
+
+import java.util.Locale;
 
 public class VideoListingSmallController extends VideoListingController implements ListablePaneController {
 
@@ -23,6 +26,10 @@ public class VideoListingSmallController extends VideoListingController implemen
     @FXML
     private Label videoTypeLabel;
 
+    ListingContainerController parentContainer;
+
+    Video video;
+
     @FXML
     void onClick(MouseEvent event) throws Exception {
         AppState.debug("Clicked on video link");
@@ -33,7 +40,10 @@ public class VideoListingSmallController extends VideoListingController implemen
 
     @Override
     public void fillData(Listable listing, ListingContainerController parentContainer) {
+        this.video = (Video) listing;
+        this.parentContainer = parentContainer;
+
+        titleText.setText(video.getTitle());
+        videoTypeLabel.setText(video.getGenre().toUpperCase() + " " + video.getType().toUpperCase());
     }
-
-
 }

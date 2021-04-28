@@ -5,6 +5,8 @@
  */
 package model;
 
+import model.interfaces.Listable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
@@ -14,7 +16,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
  */
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class VideoCharacter {
+public class VideoCharacter implements Listable {
     private int id;
     private String characterName;
     private String actorName;

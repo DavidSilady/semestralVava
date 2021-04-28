@@ -43,4 +43,8 @@ public class Movie extends Video {
         return "Movie{" + super.toString() + "related=" + relatedIndeces.toString() + '}';
     }
 
+    @Override
+    public String getType() {
+        return "Movie";
+    }
 }

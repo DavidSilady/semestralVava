@@ -6,6 +6,8 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+
 import model.Rating;
 import model.Video;
 
@@ -14,6 +16,7 @@ import model.Video;
  * @author adamg
  */
 public abstract class ContentFilter {
+
     private static byte avgRating(Rating ratings) {
         byte result = 0;
 
@@ -63,7 +66,7 @@ public abstract class ContentFilter {
         return picks;
     }
     
-    public static ArrayList<Video> pickContent(ArrayList<Video> videos, short year, int numberOfItems) {
+    public static ArrayList<Video> pickContent(ArrayList<Video> videos, int year, int numberOfItems) {
         ArrayList<Video> picks = new ArrayList<>();
 
         for (int i = 0; i < videos.size(); i++) {
@@ -100,5 +103,10 @@ public abstract class ContentFilter {
         }
 
         return picks;
+    }
+
+    public static ArrayList<Video> pickMostPopular(ArrayList<Video> videos, int amount) {
+        videos.sort(Comparator.comparingInt(Video::getNumberOfReviews));
+        return new ArrayList<>(videos.subList(0, amount));
     }
 }

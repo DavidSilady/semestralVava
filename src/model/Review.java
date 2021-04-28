@@ -5,11 +5,13 @@
  */
 package model;
 
+import model.interfaces.Listable;
+
 /**
  *
  * @author adamg
  */
-public class Review {
+public class Review implements Listable {
 
     private String username;
     private String title;
