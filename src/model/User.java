@@ -29,6 +29,14 @@ public class User implements Listable, Passable {
         this.reviews = reviews;
     }
 
+    public ArrayList<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(ArrayList<Review> reviews) {
+        this.reviews = reviews;
+    }
+
     public String getName() {
         return name;
     }

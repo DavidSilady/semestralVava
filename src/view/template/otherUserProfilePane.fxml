@@ -7,13 +7,13 @@
 <AnchorPane prefHeight="640.0" prefWidth="1165.0" style="-fx-background-color: white;" stylesheets="/view/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OtherUserProfilePaneController">
    <children>
       <AnchorPane fx:id="favouritesPane" layoutX="781.0" layoutY="59.0" prefHeight="548.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" />
-      <Label fx:id="recommendedLabel" layoutX="780.0" layoutY="33.0" text="Favourites" textFill="#ef5350">
+      <Label layoutX="780.0" layoutY="33.0" text="Favourites" textFill="#ef5350">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <AnchorPane fx:id="charactersPane1" layoutX="27.0" layoutY="59.0" prefHeight="548.0" prefWidth="720.0" style="-fx-background-color: #EF5350;" />
-      <Label fx:id="reviewsPane" layoutX="26.0" layoutY="33.0" text="Reviews" textFill="#ef5350">
+      <AnchorPane fx:id="reviewsPane" layoutX="27.0" layoutY="59.0" prefHeight="548.0" prefWidth="720.0" style="-fx-background-color: #EF5350;" />
+      <Label layoutX="26.0" layoutY="33.0" text="Reviews" textFill="#ef5350">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

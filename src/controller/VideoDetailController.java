@@ -82,6 +82,10 @@ public class VideoDetailController extends Controller {
         );
         review.setUser(AppState.getInstance().getActiveUser());
 
+        if (AppState.getInstance().getActiveUser() != null) {
+            AppState.getInstance().getActiveUser().addReview(review);
+        }
+
         video.addReview(review);
         reviewsContainerController.updateListing(new ArrayList<>(video.getReviews()));
     }
