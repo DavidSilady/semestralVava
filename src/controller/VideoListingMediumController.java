@@ -4,7 +4,6 @@ import controller.abstracts.Controller;
 import controller.interfaces.ListablePaneController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -14,9 +13,10 @@ import model.Video;
 import model.interfaces.Listable;
 import view.SceneManager;
 
-import java.util.Locale;
-
-public class VideoListingSmallController extends Controller implements ListablePaneController {
+public class VideoListingMediumController extends Controller implements ListablePaneController {
+    public Text curiosityText;
+    public Label lengthLabel;
+    public Label directorLabel;
     @FXML
     private ImageView image;
 
@@ -49,5 +49,9 @@ public class VideoListingSmallController extends Controller implements ListableP
         titleText.setText(video.getTitle());
         videoTypeLabel.setText(video.getGenre().toUpperCase() + " " + video.getType().toUpperCase());
         dynamicSortInfoLabel.setText(video.getRelevantSortInfo());
+
+        curiosityText.setText(video.getCuriosity());
+        directorLabel.setText(video.getDirector());
+        lengthLabel.setText(Short.toString(video.getLength()));
     }
 }

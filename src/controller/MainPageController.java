@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import model.Video;
 import view.SceneManager;
 
 public class MainPageController extends Controller {
@@ -55,10 +56,10 @@ public class MainPageController extends Controller {
         SceneManager.switchDynamicPane(dynamicPane, "homePane");
     }
 
-    //TODO: implement passing a video object as param and set as active video in videoDetailController
-    public void redirectToVideoPane() throws Exception {
+    public void redirectToVideoPane(Video video) throws Exception {
         FXMLLoader fxmlLoader = SceneManager.switchDynamicPane(dynamicPane, "videoDetail");
         VideoDetailController videoDetailController = fxmlLoader.getController();
+        videoDetailController.setVideo(video);
     }
 
     @FXML

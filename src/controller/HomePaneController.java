@@ -1,22 +1,17 @@
 package controller;
 
 import controller.abstracts.Controller;
-import controller.interfaces.ListablePaneController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import model.AppState;
-import model.User;
 import model.Video;
 import model.interfaces.Listable;
 import view.SceneManager;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 
 public class HomePaneController extends Controller {
 
@@ -55,7 +50,7 @@ public class HomePaneController extends Controller {
 
         // TODO: get list from model and populate
         ArrayList<Video> list = new ArrayList<>(AppState.getInstance().getVideos());
-        list = ContentFilter.pickContent(list, (byte) 7, 10);
+        list = ContentFilter.sortByRatings(list, 10);
         populateList(recommendedPaneController, new ArrayList<>(list), "videoListingSmall");
     }
 
@@ -66,7 +61,7 @@ public class HomePaneController extends Controller {
 
         // TODO: get list from model and populate
         ArrayList<Video> list = new ArrayList<>(AppState.getInstance().getVideos());
-        list = ContentFilter.pickMostPopular(list, 10);
+        list = ContentFilter.sortByPopularity(list, 10);
         populateList(mostViewedPaneController, new ArrayList<>(list), "videoListingSmall");
     }
 
@@ -77,8 +72,8 @@ public class HomePaneController extends Controller {
 
         // TODO: get list from model and populate
         ArrayList<Video> list = new ArrayList<>(AppState.getInstance().getVideos());
-        list = ContentFilter.pickContent(list, Calendar.getInstance().get(Calendar.YEAR) - 1, 10);
-        populateList(newReleasesPaneController, new ArrayList<>(list), "videoListingSmall");
+        list = ContentFilter.sortByYear(list, 10);
+        populateList(newReleasesPaneController, new ArrayList<>(list), "videoListingMedium");
     }
 
     private void populateList(ListingContainerController controller, ArrayList<Listable> list, String listingName) throws Exception {

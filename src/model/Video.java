@@ -33,11 +33,20 @@ public abstract class Video implements Listable {
     private String curiosity;
     
     private Rating ratings;
+
+    private String relevantSortInfo = "";
     
     private ArrayList<VideoCharacter> characters;
     
     private ArrayList<Review> reviews;
-    
+
+    public String getRelevantSortInfo() {
+        return relevantSortInfo;
+    }
+
+    public void setRelevantSortInfo(String relevantSortInfo) {
+        this.relevantSortInfo = relevantSortInfo;
+    }
 
     public int getId() {
         return id;
@@ -160,6 +169,11 @@ public abstract class Video implements Listable {
                 break;
         }
     }
+
+    public int getAvgRating() {
+        AppState.debug(this.ratings.toString());
+        return (this.ratings.getCsfd() + this.ratings.getImdb() + this.ratings.getOurs()) / 3;
+    }
     
     public byte countNewRating(){
         byte result = 0;
@@ -189,6 +203,7 @@ public abstract class Video implements Listable {
     }
 
     public Video() {
+        this.reviews = new ArrayList<>();
     }
 
     public String getType() {

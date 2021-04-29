@@ -9,6 +9,9 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import model.Video;
+
+import java.util.Locale;
 
 public class VideoDetailController extends Controller {
 
@@ -57,9 +60,27 @@ public class VideoDetailController extends Controller {
     @FXML
     private Slider reviewRatingSlider;
 
+    private Video video;
+
     @FXML
     void addReview(ActionEvent event) {
 
+    }
+
+    public void setVideo(Video video) {
+        this.video = video;
+        setupLabels();
+    }
+
+    private void setupLabels() {
+        titleLabel.setText(video.getTitle());
+        typeText.setText(video.getGenre().toUpperCase() + " " + video.getType());
+        yearText.setText(video.getYear() + "");
+        lengthText.setText(video.getLength() + " minutes");
+        studioText.setText(video.getStudio());
+        ratingText.setText(video.getAvgRating() / 10 + "*");
+        directorText.setText(video.getDirector());
+        curiosityText.setText(video.getCuriosity());
     }
 
 }
