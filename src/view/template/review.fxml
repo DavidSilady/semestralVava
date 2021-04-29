@@ -11,7 +11,7 @@
       <Text fx:id="reviewText" fill="#464646" layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Review text, lorem ipsum. . . " wrappingWidth="692.13671875" />
       <AnchorPane layoutY="-1.0" onMouseClicked="#onUsernameClicked" prefHeight="30.0" prefWidth="734.0" style="-fx-background-color: white;" styleClass="clickable-pane">
          <children>
-            <Text fx:id="usernameText" fill="#ef5350" layoutX="62.0" layoutY="20.0" onMouseClicked="#onUsernameClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="347.13671922683716">
+            <Text fx:id="usernameText" fill="#ef5350" layoutX="62.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="347.13671922683716">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

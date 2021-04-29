@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import model.User;
 import model.Video;
 import view.SceneManager;
 
@@ -61,6 +62,11 @@ public class MainPageController extends Controller {
         VideoDetailController videoDetailController = fxmlLoader.getController();
         videoDetailController.setVideo(video);
     }
+
+    public void redirectToProfilePane(User user) throws Exception {
+        //TODO: implement
+    }
+
 
     @FXML
     void logOut(ActionEvent event) throws Exception {

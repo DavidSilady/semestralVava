@@ -19,9 +19,10 @@ public class ReviewController extends Controller implements ListablePaneControll
     private Review review;
     ListingContainerController parentController;
 
-    public void onUsernameClicked(MouseEvent mouseEvent) throws Exception {
-        FXMLLoader fxmlLoader = SceneManager.switchScene(mouseEvent, "mainPage");
+    public void onUsernameClicked(MouseEvent event) throws Exception {
+        FXMLLoader fxmlLoader = SceneManager.switchScene(event, "mainPage");
         MainPageController mainPageController = fxmlLoader.getController();
+        mainPageController.redirectToProfilePane(review.getUser());
     }
 
     @Override

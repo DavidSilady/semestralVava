@@ -3,18 +3,21 @@ package controller;
 import controller.abstracts.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextArea;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import model.AppState;
+import model.Review;
 import model.Video;
+import view.SceneManager;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class VideoDetailController extends Controller {
 
+    public TextField titleField;
     @FXML
     private Label titleLabel;
 
@@ -62,17 +65,26 @@ public class VideoDetailController extends Controller {
 
     private Video video;
 
-    @FXML
-    void addReview(ActionEvent event) {
+    ListingContainerController reviewsContainerController;
 
+    @FXML
+    void addReview(ActionEvent event) throws Exception {
+        Review review = new Review(
+                AppState.getInstance().getActiveUser().getUsername(),
+                titleField.getText(),
+                newReviewTextArea.getText(),
+                (byte) Math.floor(reviewRatingSlider.getValue() * 10)
+        );
+        video.addReview(review);
+        reviewsContainerController.updateListing(new ArrayList<>(video.getReviews()));
     }
 
-    public void setVideo(Video video) {
+    public void setVideo(Video video) throws Exception {
         this.video = video;
         setupLabels();
     }
 
-    private void setupLabels() {
+    private void setupLabels() throws Exception {
         titleLabel.setText(video.getTitle());
         typeText.setText(video.getGenre().toUpperCase() + " " + video.getType());
         yearText.setText(video.getYear() + "");
@@ -81,6 +93,17 @@ public class VideoDetailController extends Controller {
         ratingText.setText(video.getAvgRating() / 10 + "*");
         directorText.setText(video.getDirector());
         curiosityText.setText(video.getCuriosity());
+
+        setupReviews();
+    }
+
+    private void setupReviews() throws Exception{
+        FXMLLoader fxmlLoader = SceneManager.switchDynamicPane(reviewsPane, "listingContainer");
+        reviewsContainerController = fxmlLoader.getController();
+
+        reviewsContainerController.setParameters(720, 190);
+
+        reviewsContainerController.populate(new ArrayList<>(video.getReviews()), "review");
     }
 
 }

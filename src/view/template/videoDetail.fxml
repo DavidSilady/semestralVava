@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -65,8 +66,9 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TextArea fx:id="newReviewTextArea" layoutX="29.0" layoutY="507.0" prefHeight="73.0" prefWidth="720.0" />
-      <Button fx:id="addReviewButton" layoutX="30.0" layoutY="580.0" mnemonicParsing="false" onAction="#addReview" prefHeight="38.0" prefWidth="134.0" text="Add Review" />
-      <Slider fx:id="reviewRatingSlider" layoutX="180.0" layoutY="582.0" max="10.0" showTickLabels="true" showTickMarks="true" style="-fx-control-inner-background: #E57373;" value="5.0" />
+      <TextArea fx:id="newReviewTextArea" layoutX="29.0" layoutY="544.0" prefHeight="73.0" prefWidth="720.0" promptText="Comment" />
+      <Button fx:id="addReviewButton" layoutX="29.0" layoutY="507.0" mnemonicParsing="false" onAction="#addReview" prefHeight="38.0" prefWidth="134.0" text="Add Review" />
+      <Slider fx:id="reviewRatingSlider" blockIncrement="1.0" layoutX="163.0" layoutY="507.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" style="-fx-control-inner-background: #E57373;" value="5.0" />
+      <TextField fx:id="titleField" layoutX="318.0" layoutY="514.0" prefHeight="25.0" prefWidth="430.0" promptText="Title" style="-fx-background-color: white;" />
    </children>
 </AnchorPane>
