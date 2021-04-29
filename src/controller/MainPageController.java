@@ -30,12 +30,10 @@ public class MainPageController extends Controller {
 
     @FXML
     void goToCharts(ActionEvent event) {
-
     }
 
     @FXML
     void goToDaily(ActionEvent event) {
-
     }
 
     @FXML
@@ -45,12 +43,11 @@ public class MainPageController extends Controller {
 
     @FXML
     void searchGeneral(ActionEvent event) {
-
     }
 
     @FXML
     void goToProfile(ActionEvent event) throws Exception {
-        SceneManager.switchDynamicPane(dynamicPane, "profilePane");
+        SceneManager.switchDynamicPane(dynamicPane, "myProfilePane");
     }
 
     public void init() throws Exception {
@@ -64,7 +61,9 @@ public class MainPageController extends Controller {
     }
 
     public void redirectToProfilePane(User user) throws Exception {
-        //TODO: implement
+        FXMLLoader fxmlLoader = SceneManager.switchDynamicPane(dynamicPane, "otherUserProfilePane");
+        OtherUserProfilePaneController videoDetailController = fxmlLoader.getController();
+        videoDetailController.setUser(user);
     }
 
 
