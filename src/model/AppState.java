@@ -14,17 +14,13 @@ public class AppState {
         this.users = usrs.getUsers();
         this.movies = mvs.getFilmy();
         this.tvshows = tvs.getSerialy();
-
-        this.activeUser = new User();
-        this.activeUser.setUsername("Anonymous");
-        this.users.add(this.activeUser);
     };
 
     private ArrayList<User> users;
     private ArrayList<Movie> movies;
     private ArrayList<TVShow> tvshows;
 
-    private User activeUser;
+    private User activeUser = null;
 
     public static void debug(String output) {
         if (DEBUG) {

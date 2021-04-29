@@ -30,6 +30,22 @@ public class VideoCharacter implements Listable {
         this.actorName = actorName;
     }
 
+    public String getCharacterName() {
+        return characterName;
+    }
+
+    public void setCharacterName(String characterName) {
+        this.characterName = characterName;
+    }
+
+    public String getActorName() {
+        return actorName;
+    }
+
+    public void setActorName(String actorName) {
+        this.actorName = actorName;
+    }
+
     @Override
     public String toString() {
         return "VideoCharacter{" + "characterName=" + characterName + ", actorName=" + actorName + '}';

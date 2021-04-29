@@ -66,15 +66,22 @@ public class VideoDetailController extends Controller {
     private Video video;
 
     ListingContainerController reviewsContainerController;
+    ListingContainerController charactersContainerController;
 
     @FXML
     void addReview(ActionEvent event) throws Exception {
+        String username = "Anonymous"; //Default
+        if (AppState.getInstance().getActiveUser() != null) {
+            username = AppState.getInstance().getActiveUser().getUsername();
+        }
         Review review = new Review(
-                AppState.getInstance().getActiveUser().getUsername(),
+                username,
                 titleField.getText(),
                 newReviewTextArea.getText(),
                 (byte) Math.floor(reviewRatingSlider.getValue() * 10)
         );
+        review.setUser(AppState.getInstance().getActiveUser());
+
         video.addReview(review);
         reviewsContainerController.updateListing(new ArrayList<>(video.getReviews()));
     }
@@ -95,6 +102,7 @@ public class VideoDetailController extends Controller {
         curiosityText.setText(video.getCuriosity());
 
         setupReviews();
+        setupCharacters();
     }
 
     private void setupReviews() throws Exception{
@@ -103,7 +111,16 @@ public class VideoDetailController extends Controller {
 
         reviewsContainerController.setParameters(720, 190);
 
-        reviewsContainerController.populate(new ArrayList<>(video.getReviews()), "review");
+        reviewsContainerController.populate(new ArrayList<>(video.getReviews()), "reviewListing");
+    }
+
+    private void setupCharacters() throws Exception{
+        FXMLLoader fxmlLoader = SceneManager.switchDynamicPane(charactersPane, "listingContainer");
+        charactersContainerController = fxmlLoader.getController();
+
+        charactersContainerController.setParameters(370, 550);
+
+        charactersContainerController.populate(new ArrayList<>(video.getCharacters()), "videoCharacterListing");
     }
 
 }
