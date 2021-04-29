@@ -39,6 +39,10 @@
     -fx-cursor: hand;
 }
 
+.listable-pane {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 2, 0, 0, 0);
+}
+
 .clickable-pane {
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 2, 0, 0, 0);
 }

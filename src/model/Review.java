@@ -13,10 +13,20 @@ import model.interfaces.Listable;
  */
 public class Review implements Listable {
 
+    private User user;
+
     private String username;
     private String title;
     private String commentary;
     private byte score;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public String getUsername() {
         return username;

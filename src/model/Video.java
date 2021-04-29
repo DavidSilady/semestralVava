@@ -21,8 +21,7 @@ public abstract class Video implements Listable {
     private final static byte CSFD = 1;
     private final static byte IMDB = 2;
     private final static byte OURS = 3;
-    
-    
+
     private int id;
     private String title;
     private String genre;
@@ -171,7 +170,6 @@ public abstract class Video implements Listable {
     }
 
     public int getAvgRating() {
-        AppState.debug(this.ratings.toString());
         return (this.ratings.getCsfd() + this.ratings.getImdb() + this.ratings.getOurs()) / 3;
     }
     
