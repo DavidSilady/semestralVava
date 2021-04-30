@@ -8,12 +8,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import me.xdrop.fuzzywuzzy.FuzzySearch;
+import me.xdrop.fuzzywuzzy.model.BoundExtractedResult;
 import model.AppState;
 import model.User;
 import model.Video;
 import view.SceneManager;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -51,6 +55,16 @@ public class MainPageController extends Controller implements Initializable {
 
     @FXML
     void searchGeneral(ActionEvent event) {
+        try {
+            ArrayList<Video> list = AppState.getInstance().getVideos();
+            List<BoundExtractedResult<Video>> results = FuzzySearch.extractTop(searchField.getText(), list, Video::toString, 20);
+
+            for (BoundExtractedResult<Video> result : results) {
+                AppState.debug(result.getReferent().toString());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

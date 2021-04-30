@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Movie extends Video {
 
-    private ArrayList<Integer> relatedIndeces;
+    private ArrayList<Integer> relatedIndeces = new ArrayList<>();
 
     public Movie(String title, String genre, short length, short year, String studio, ArrayList<VideoCharacter> characters, String curiosity, Rating ratings, String director, ArrayList<Integer> relatedIndeces) {
         super(title, genre, length, year, studio, characters, curiosity, ratings, director);
