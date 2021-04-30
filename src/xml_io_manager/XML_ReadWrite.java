@@ -14,6 +14,7 @@ public class XML_ReadWrite {
     public static final int TYPMOVIES = 1;
     public static final int TYPTVSHOWS = 2;
     public static final int TYPUSERS = 3;
+    public static final int TYPREVIEWS = 4;
     
     public XML_ReadWrite() {}
     
@@ -33,6 +34,9 @@ public class XML_ReadWrite {
                 
             case TYPUSERS:
                 return new XML_ReadWrite_Users();
+            
+            case TYPREVIEWS:
+                return new XML_ReadWrite_Reviews();
                 
             default:
                 return null;

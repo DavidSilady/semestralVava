@@ -88,6 +88,25 @@ public class VideoDetailController extends Controller {
             review.setUser(AppState.getInstance().getActiveUser());
             review.setVideo(video);
 
+            // 30.4.2021
+            // ak pridavam recenziu k filmu
+            for (int i = 0; i < AppState.getInstance().getMovies().size(); i++) {
+                Movie film = AppState.getInstance().getMovies().get(i);
+                if(film.getTitle().equals(video.getTitle())){
+                    review.setMovieIndex(i);
+                }
+            }
+
+            // ak pridavam recenziu k serialu
+            if(review.getMovieIndex() == null){
+                for (int i = 0; i < AppState.getInstance().getTvshows().size(); i++) {
+                   TVShow serial = AppState.getInstance().getTvshows().get(i);
+                   if(serial.getTitle().equals(video.getTitle())){
+                       review.setTvShowIndex(i);
+                   }
+               }   
+            }
+            
             if (AppState.getInstance().getActiveUser() != null) {
                 AppState.getInstance().getActiveUser().addReview(review);
             }

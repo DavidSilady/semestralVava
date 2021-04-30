@@ -9,9 +9,7 @@ import model.interfaces.Listable;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlTransient;
-import java.beans.Transient;
 
 /**
  * @author adamg
@@ -48,6 +46,22 @@ public class Review implements Listable {
         this.user = user;
     }
 
+    public Integer getMovieIndex() {
+        return movieIndex;
+    }
+
+    public void setMovieIndex(Integer movieIndex) {
+        this.movieIndex = movieIndex;
+    }
+
+    public Integer getTvShowIndex() {
+        return tvShowIndex;
+    }
+
+    public void setTvShowIndex(Integer tvShowIndex) {
+        this.tvShowIndex = tvShowIndex;
+    }
+    
     public String getUsername() {
         return username;
     }
@@ -87,6 +101,15 @@ public class Review implements Listable {
         this.score = score;
     }
 
+    public Review(Integer movieIndex, Integer tvShowIndex, String username, String title, String commentary, byte score) {
+        this.movieIndex = movieIndex;
+        this.tvShowIndex = tvShowIndex;
+        this.username = username;
+        this.title = title;
+        this.commentary = commentary;
+        this.score = score;
+    }
+    
     public Review() {
 
     }

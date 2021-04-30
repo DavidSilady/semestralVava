@@ -15,12 +15,21 @@ public class AppState {
     private static final Boolean DEBUG = true;
     private AppState() {
         //this.users = new ArrayList<>();
+        Reviews movieReviews = (Reviews) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).read("src\\data\\moviesreviews.xml");
+        Reviews tvshowReviews = (Reviews) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).read("src\\data\\tvshowsreviews.xml");
+        
+        System.out.println("tvshowReviews = " + tvshowReviews);
+        System.out.println("movieReviews = " + movieReviews);
+        
         Users usrs = (Users) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPUSERS).read("src\\data\\users.xml");
         Movies mvs = (Movies) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPMOVIES).read("src\\data\\movies.xml");
         TVShows tvs = (TVShows) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPTVSHOWS).read("src\\data\\tvshows.xml");
+        
         this.users = usrs.getUsers();
         this.movies = mvs.getFilmy();
         this.tvshows = tvs.getSerialy();
+        
+        namapujRecenzie(movieReviews, tvshowReviews);
     };
 
     private ArrayList<User> users;
@@ -128,5 +137,53 @@ public class AppState {
             }
         }
         return false;
+    }
+    
+    
+    public void namapujRecenzie(Reviews filmyRecenzie, Reviews serialyRecenzie){
+        
+        if(filmyRecenzie != null){
+        
+            ArrayList<Review> filmrecenzie = filmyRecenzie.getRecenzie();
+
+            // namapuj recenzie na filmy
+            for (int i = 0; i < filmrecenzie.size(); i++) {
+                Review recenzia = filmrecenzie.get(i);
+
+                // namapuj recenziu na usera
+                for (int j = 0; j < this.users.size(); j++) {
+                    User user = this.users.get(j);
+                        if(user.getUsername().equals(recenzia.getUsername())){
+                            user.addReview(recenzia);
+                            break;
+                        }
+                }
+
+                // namapuj recenziu na film
+                this.movies.get(recenzia.getMovieIndex()).getReviews().add(recenzia);
+            }
+        }
+        
+        if(serialyRecenzie != null){
+        
+            ArrayList<Review> serialrecenzie = serialyRecenzie.getRecenzie();
+            // namapuj recenzie na serialy
+            for (int i = 0; i < serialrecenzie.size(); i++) {
+                Review recenzia = serialrecenzie.get(i);
+
+                // namapuj recenziu na usera
+                for (int j = 0; j < this.users.size(); j++) {
+                    User user = this.users.get(j);
+                        if(user.getUsername().equals(recenzia.getUsername())){
+                            user.addReview(recenzia);
+                            break;
+                        }
+                }
+
+                // namapuj recenziu na film
+                this.tvshows.get(recenzia.getTvShowIndex()).getReviews().add(recenzia);
+            }
+        }
+        
     }
 }
