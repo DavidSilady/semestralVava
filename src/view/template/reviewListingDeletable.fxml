@@ -10,9 +10,9 @@
 <AnchorPane prefHeight="0.0" prefWidth="720.0" style="-fx-background-color: white;" styleClass="listable-pane" stylesheets="/view/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReviewListingController">
    <children>
       <Text fx:id="reviewText" fill="#464646" layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Review text, lorem ipsum. . . " wrappingWidth="692.13671875" />
-      <AnchorPane layoutY="-1.0" onMouseClicked="#onUsernameClicked" prefHeight="30.0" prefWidth="734.0" style="-fx-background-color: white;" styleClass="clickable-pane">
+      <AnchorPane layoutY="-1.0" onMouseClicked="#onHeaderClicked" prefHeight="30.0" prefWidth="734.0" style="-fx-background-color: white;" styleClass="clickable-pane">
          <children>
-            <Text fx:id="usernameText" fill="#ef5350" layoutX="62.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="347.13671922683716">
+            <Text fx:id="usernameText" onMouseClicked="#clickOnUsername" fill="#ef5350" layoutX="62.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="347.13671922683716">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -22,7 +22,12 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="deleteButton" layoutX="640.0" layoutY="4.0" mnemonicParsing="false" onAction="#deleteReview" prefHeight="25.0" prefWidth="85.0" text="Delete" />
+            <Button fx:id="deleteButton" layoutX="606.0" layoutY="4.0" mnemonicParsing="false" onAction="#deleteReview" prefHeight="25.0" prefWidth="85.0" text="Delete" />
+            <Label fx:id="movieNameLabel" onMouseClicked="#clickOnVideoTitle" layoutX="353.0" layoutY="8.0" text="Label">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <Label fx:id="titleLabel" layoutX="14.0" layoutY="34.0" text="Title">

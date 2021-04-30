@@ -2,6 +2,7 @@ package controller;
 
 import controller.abstracts.Controller;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import model.AppState;
 import model.User;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 public class UserListsPaneController extends Controller {
     public AnchorPane favouritesPane;
     public AnchorPane reviewsPane;
+    public Label userNameHeaderLabel;
     User user;
 
     ListingContainerController favouritesPaneController;
@@ -20,6 +22,7 @@ public class UserListsPaneController extends Controller {
 
     public void setUser(User user) throws Exception {
         this.user = user;
+        userNameHeaderLabel.setText(user.getUsername() + "'s lists");
         setupFavouritesPane();
         setupReviewsPane();
     }

@@ -18,5 +18,10 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <Label fx:id="userNameHeaderLabel" layoutX="28.0" layoutY="6.0" text="User's lists" textFill="#ef5350">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
