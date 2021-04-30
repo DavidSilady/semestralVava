@@ -81,7 +81,7 @@ public class VideoDetailController extends Controller {
             }
             Review review = new Review(
                     username,
-                    titleField.getText(),
+                    censor(titleField.getText()),
                     censor(newReviewTextArea.getText()),
                     (byte) Math.floor(reviewRatingSlider.getValue() * 10)
             );
@@ -101,7 +101,7 @@ public class VideoDetailController extends Controller {
     }
 
     private String censor(String text) {
-        return text.replaceAll("(mudguard|fuck|shit|bitch|asshole)", "$#!*");
+        return text.replaceAll("(mudguard|fuck|shit|bitch|asshole)", "****");
     }
 
     //Check if input is valid
