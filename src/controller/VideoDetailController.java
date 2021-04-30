@@ -5,12 +5,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import model.*;
 import view.SceneManager;
 
 import javax.jws.soap.SOAPBinding;
+import java.awt.*;
 import java.util.ArrayList;
 
 public class VideoDetailController extends Controller {
@@ -137,15 +142,17 @@ public class VideoDetailController extends Controller {
         charactersContainerController.populate(new ArrayList<>(video.getCharacters()), "videoCharacterListing");
     }
 
-    public void addToFavourites(ActionEvent event) {
+    public void addToFavourites(ActionEvent event) throws AWTException {
         User activeUser = AppState.getInstance().getActiveUser();
         // If not logged in or already in favourites, skip
         if (activeUser == null || activeUser.getAllFavourites().contains(video)) { return; }
 
         if (video instanceof Movie) {
             activeUser.addFavMovie((Movie) video);
+            pushNotification("Notification Demo", "Movie added", "Movie " + video.getTitle() + " has been added to favourites.");
         } else if (video instanceof TVShow) {
             activeUser.addFavTVShow((TVShow) video);
+            pushNotification("Notification Demo", "TV show added", "TV show " + video.getTitle() + " has been added to favourites.");
         }
     }
 
@@ -155,6 +162,16 @@ public class VideoDetailController extends Controller {
         } else if (video instanceof TVShow) {
             displayTVShowSpecifics();
         }
+    }
+
+    private void pushNotification(String tooltip, String title, String text) throws AWTException {
+        SystemTray tray = SystemTray.getSystemTray();
+        Image image = Toolkit.getDefaultToolkit().createImage("icon.png");
+        TrayIcon trayIcon = new TrayIcon(image, tooltip);
+        trayIcon.setImageAutoSize(true);
+        trayIcon.setToolTip(tooltip);
+        tray.add(trayIcon);
+        trayIcon.displayMessage(title, text, TrayIcon.MessageType.INFO);
     }
 
     private void displayMovieSpecifics() {
