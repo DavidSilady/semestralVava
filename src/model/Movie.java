@@ -8,6 +8,7 @@ package model;
 import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -15,7 +16,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Movie extends Video {
-
+    @XmlElement(name = "relatedIndeces")
     private ArrayList<Integer> relatedIndeces = new ArrayList<>();
 
     public Movie(String title, String genre, short length, short year, String studio, ArrayList<VideoCharacter> characters, String curiosity, Rating ratings, String director, ArrayList<Integer> relatedIndeces) {
