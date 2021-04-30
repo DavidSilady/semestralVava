@@ -1,5 +1,6 @@
 package view;
 
+import controller.PopUpController;
 import controller.abstracts.Controller;
 import javafx.event.Event;
 import javafx.fxml.*;
@@ -151,4 +152,10 @@ public class SceneManager {
         instance.setLocale(locale);
     }
 
+    public static FXMLLoader newPopUp(String title, String text) throws Exception {
+        FXMLLoader fxmlLoader = newWindow("popUpGeneric", 370, 120);
+        PopUpController popUpController = fxmlLoader.getController();
+        popUpController.setProperties(title, text);
+        return fxmlLoader;
+    }
 }

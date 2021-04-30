@@ -76,26 +76,34 @@ public class VideoDetailController extends Controller {
 
     @FXML
     void addReview(ActionEvent event) throws Exception {
-        String username = "Anonymous"; //Default
-        if (AppState.getInstance().getActiveUser() != null) {
-            username = AppState.getInstance().getActiveUser().getUsername();
-        }
-        Review review = new Review(
-                username,
-                titleField.getText(),
-                newReviewTextArea.getText(),
-                (byte) Math.floor(reviewRatingSlider.getValue() * 10)
-        );
-        review.setUser(AppState.getInstance().getActiveUser());
-        review.setVideo(video);
+        if (validInput()) {
+            String username = "Anonymous"; //Default
+            if (AppState.getInstance().getActiveUser() != null) {
+                username = AppState.getInstance().getActiveUser().getUsername();
+            }
+            Review review = new Review(
+                    username,
+                    titleField.getText(),
+                    newReviewTextArea.getText(),
+                    (byte) Math.floor(reviewRatingSlider.getValue() * 10)
+            );
+            review.setUser(AppState.getInstance().getActiveUser());
+            review.setVideo(video);
 
-        if (AppState.getInstance().getActiveUser() != null) {
-            AppState.getInstance().getActiveUser().addReview(review);
-        }
+            if (AppState.getInstance().getActiveUser() != null) {
+                AppState.getInstance().getActiveUser().addReview(review);
+            }
 
-        video.addReview(review);
-        reviewsContainerController.updateListing(new ArrayList<>(video.getReviews()));
-        ratingText.setText((float) video.getAvgRating() / 10 + "*");
+            video.addReview(review);
+            reviewsContainerController.updateListing(new ArrayList<>(video.getReviews()));
+            ratingText.setText((float) video.getAvgRating() / 10 + "*");
+        } else {
+            SceneManager.newPopUp("Invalid input", "Either title or commentary are missing");
+        }
+    }
+
+    private boolean validInput() {
+        return true;
     }
 
     public void setVideo(Video video) throws Exception {
@@ -143,10 +151,17 @@ public class VideoDetailController extends Controller {
         charactersContainerController.populate(new ArrayList<>(video.getCharacters()), "videoCharacterListing");
     }
 
-    public void addToFavourites(ActionEvent event) throws AWTException {
+    public void addToFavourites(ActionEvent event) throws Exception {
         User activeUser = AppState.getInstance().getActiveUser();
         // If not logged in or already in favourites, skip
-        if (activeUser == null || activeUser.getAllFavourites().contains(video)) { return; }
+        if (activeUser == null ) {
+            SceneManager.newPopUp("Not logged in", "You need to be logged in, in order to add to favourites");
+            return;
+        }
+        if (activeUser.getAllFavourites().contains(video)) {
+            SceneManager.newPopUp("Already added", "This content has already been in your list");
+            return;
+        }
 
         if (video instanceof Movie) {
             activeUser.addFavMovie((Movie) video);

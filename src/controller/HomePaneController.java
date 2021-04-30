@@ -10,10 +10,7 @@ import model.Video;
 import model.interfaces.Listable;
 import view.SceneManager;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class HomePaneController extends Controller {
 
@@ -93,4 +90,10 @@ public class HomePaneController extends Controller {
         newReleasesLabel.setText(bundle.getString("searchResults"));
     }
 
+    public void setDaily(List<Video> subList) throws Exception {
+        newReleasesPaneController.updateListing(new ArrayList<>(subList));
+        Locale locale = SceneManager.getInstance().getLocale();
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.Language", locale);
+        newReleasesLabel.setText(bundle.getString("dailyList"));
+    }
 }

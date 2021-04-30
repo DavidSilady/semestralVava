@@ -16,10 +16,7 @@ import model.Video;
 import view.SceneManager;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class MainPageController extends Controller implements Initializable {
 
@@ -45,7 +42,12 @@ public class MainPageController extends Controller implements Initializable {
     }
 
     @FXML
-    void goToDaily(ActionEvent event) {
+    void goToDaily(ActionEvent event) throws Exception {
+        FXMLLoader fxmlLoader = SceneManager.switchDynamicPane(dynamicPane, "homePane");
+        HomePaneController homePaneController = fxmlLoader.getController();
+        ArrayList<Video> list = new ArrayList<>(AppState.getInstance().getVideos());
+        Collections.shuffle(list);
+        homePaneController.setDaily(list.subList(0, 10));
     }
 
     @FXML

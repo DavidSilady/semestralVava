@@ -19,7 +19,7 @@
          <children>
             <Button fx:id="logButton" layoutX="944.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="107.0" text="%logOut" />
             <Button fx:id="profileButton" layoutX="826.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="%editProfile" />
-            <TextField fx:id="searchField" layoutX="265.0" prefHeight="25.0" prefWidth="270.0" promptText="%searchTerm" />
+            <TextField fx:id="searchField" layoutX="265.0" onAction="#searchGeneral" prefHeight="25.0" prefWidth="270.0" promptText="%searchTerm" />
             <Button fx:id="searchButton" layoutX="535.0" mnemonicParsing="false" onAction="#searchGeneral" prefHeight="25.0" prefWidth="66.0" text="%search" />
             <Button mnemonicParsing="false" onAction="#goToDaily" prefHeight="25.0" prefWidth="107.0" text="%daily" />
             <Button layoutX="118.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="25.0" prefWidth="107.0" text="%home" />
