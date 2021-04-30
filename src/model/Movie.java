@@ -31,7 +31,7 @@ public class Movie extends Video {
         return relatedIndeces;
     }
 
-    public void setRelated(ArrayList<Integer> relatedIndeces) {
+    public void setRelatedIndeces(ArrayList<Integer> relatedIndeces) {
         this.relatedIndeces = relatedIndeces;
     }
     
