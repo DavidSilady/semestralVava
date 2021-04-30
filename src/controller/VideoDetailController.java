@@ -82,7 +82,7 @@ public class VideoDetailController extends Controller {
             Review review = new Review(
                     username,
                     titleField.getText(),
-                    newReviewTextArea.getText(),
+                    censor(newReviewTextArea.getText()),
                     (byte) Math.floor(reviewRatingSlider.getValue() * 10)
             );
             review.setUser(AppState.getInstance().getActiveUser());
@@ -98,6 +98,10 @@ public class VideoDetailController extends Controller {
         } else {
             SceneManager.newPopUp("Invalid input", "Either title or commentary are missing");
         }
+    }
+
+    private String censor(String text) {
+        return text.replaceAll("(mudguard|fuck|shit|bitch|asshole)", "$#!*");
     }
 
     //Check if input is valid
