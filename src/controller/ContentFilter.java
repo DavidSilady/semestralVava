@@ -107,7 +107,7 @@ public abstract class ContentFilter {
     }
 
     public static ArrayList<Video> sortByPopularity(ArrayList<Video> videos, int amount) {
-        videos.sort(Comparator.comparingInt(Video::getNumberOfReviews));
+        videos.sort(Collections.reverseOrder(Comparator.comparingInt(Video::getNumberOfReviews)));
         for (Video video : videos) {
             video.setRelevantSortInfo("Number of our reviews: " + video.getNumberOfReviews());
         }

@@ -149,8 +149,6 @@ public abstract class Video implements Listable {
         }
     }
 
-
-
     public void addReview(Review review) {
         this.reviews.add(review);
         

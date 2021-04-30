@@ -30,16 +30,42 @@ public class Review implements Listable {
     private String commentary;
     private byte score;
 
+    private Video getVideoFromIndex() {
+        if (movieIndex == null) {
+            return AppState.getInstance().getTvshows().get(tvShowIndex);
+        } else {
+            return AppState.getInstance().getMovies().get(movieIndex);
+        }
+    }
+
     public Video getVideo() {
-        return video;
+        if (video == null) {
+            return getVideoFromIndex();
+        } else {
+            return video;
+        }
     }
 
     public void setVideo(Video video) {
         this.video = video;
     }
 
+    private User getUserFromUsername() {
+        for (User user : AppState.getInstance().getUsers()) {
+            if (user.getUsername().equals(this.username)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
     public User getUser() {
-        return user;
+        if (this.user == null) {
+            return getUserFromUsername();
+        } else {
+            return user;
+        }
+
     }
 
     public void setUser(User user) {
