@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import model.*;
+import model.interfaces.Listable;
 import view.SceneManager;
 
 import javax.jws.soap.SOAPBinding;
@@ -156,7 +157,7 @@ public class VideoDetailController extends Controller {
         }
     }
 
-    public void displaySpecificDetails(ActionEvent event) {
+    public void displaySpecificDetails(ActionEvent event) throws Exception {
         if (video instanceof Movie) {
             displayMovieSpecifics();
         } else if (video instanceof TVShow) {
@@ -164,8 +165,22 @@ public class VideoDetailController extends Controller {
         }
     }
 
-    private void displayMovieSpecifics() {
-
+    private void displayMovieSpecifics() throws Exception {
+        Movie movie = (Movie) video;
+        FXMLLoader fxmlLoader = SceneManager.newWindow("listingContainer", 370, 250);
+        ListingContainerController controller = fxmlLoader.getController();
+        ArrayList<Listable> list = new ArrayList<>();
+        for (Video video : AppState.getInstance().getVideos()) {
+            for (int index : movie.getRelatedIndeces()) {
+                if (video.getId() == index) {
+                    list.add(video);
+                    break;
+                }
+            }
+        }
+        AppState.debug(movie.getRelatedIndeces().size() + "");
+        controller.setParameters(370, 250);
+        controller.populate(list, "videoListingSmall");
     }
 
     private void displayTVShowSpecifics() {
