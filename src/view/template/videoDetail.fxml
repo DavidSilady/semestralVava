@@ -53,7 +53,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fx:id="curiosityText" layoutX="28.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum" wrappingWidth="608.9296875" />
+      <Text fx:id="curiosityText" layoutX="28.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum" wrappingWidth="719.9999812990427" />
       <AnchorPane fx:id="charactersPane" layoutX="768.0" layoutY="69.0" prefHeight="548.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" />
       <Label fx:id="recommendedLabel" layoutX="767.0" layoutY="43.0" text="Characters" textFill="#ef5350">
          <font>
@@ -71,7 +71,7 @@
       <Slider fx:id="reviewRatingSlider" blockIncrement="1.0" layoutX="163.0" layoutY="507.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" style="-fx-control-inner-background: #E57373;" value="5.0" />
       <TextField fx:id="titleField" layoutX="318.0" layoutY="514.0" prefHeight="25.0" prefWidth="430.0" promptText="Title" style="-fx-background-color: white;" />
       <Button layoutX="583.0" layoutY="106.0" mnemonicParsing="false" onAction="#addToFavourites" prefHeight="25.0" prefWidth="166.0" text="Add To Favourites" />
-      <Button layoutX="583.0" layoutY="143.0" mnemonicParsing="false" onAction="#displaySpecificDetails" prefHeight="25.0" prefWidth="166.0" text="Specific Details" />
+      <Button fx:id="displaySpecificDetailsButton" layoutX="583.0" layoutY="143.0" mnemonicParsing="false" onAction="#displaySpecificDetails" prefHeight="25.0" prefWidth="166.0" text="Specific Details" />
       <Label fx:id="episodesLabel" layoutX="393.0" layoutY="70.0" text="Episodes/Seasons" />
    </children>
 </AnchorPane>

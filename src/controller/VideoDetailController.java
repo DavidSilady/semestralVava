@@ -17,6 +17,7 @@ public class VideoDetailController extends Controller {
 
     public TextField titleField;
     public Label episodesLabel;
+    public Button displaySpecificDetailsButton;
     @FXML
     private Label titleLabel;
 
@@ -107,6 +108,7 @@ public class VideoDetailController extends Controller {
         curiosityText.setText(video.getCuriosity());
 
         if (video instanceof TVShow) {
+            displaySpecificDetailsButton.setVisible(false);
             TVShow tvShow = (TVShow) video;
             episodesLabel.setText("Episodes: " + tvShow.getEpisodeCount() + " Seasons: " + tvShow.getSeasonCount());
         } else {
@@ -137,8 +139,8 @@ public class VideoDetailController extends Controller {
 
     public void addToFavourites(ActionEvent event) {
         User activeUser = AppState.getInstance().getActiveUser();
-        // If already in favourites, skip
-        if (activeUser.getAllFavourites().contains(video)) { return; }
+        // If not logged in or already in favourites, skip
+        if (activeUser == null || activeUser.getAllFavourites().contains(video)) { return; }
 
         if (video instanceof Movie) {
             activeUser.addFavMovie((Movie) video);
@@ -160,6 +162,5 @@ public class VideoDetailController extends Controller {
     }
 
     private void displayTVShowSpecifics() {
-
     }
 }
