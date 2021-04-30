@@ -3,8 +3,11 @@ package model;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javafx.fxml.FXMLLoader;
+import sun.rmi.runtime.Log;
 import xml_io_manager.XML_ReadWrite;
 
 public class AppState {
@@ -28,7 +31,7 @@ public class AppState {
 
     public static void debug(String output) {
         if (DEBUG) {
-            System.out.println(output);
+            Logger.getLogger(AppState.class.getName()).log(Level.INFO, "Debug: " + output);
         }
     }
 
@@ -40,6 +43,10 @@ public class AppState {
         trayIcon.setToolTip(tooltip);
         tray.add(trayIcon);
         trayIcon.displayMessage(title, text, TrayIcon.MessageType.INFO);
+    }
+
+    public static void error(String error) {
+        Logger.getLogger(AppState.class.getName()).log(Level.SEVERE, "Error: " + error);
     }
 
     public ArrayList<Video> getVideos() {

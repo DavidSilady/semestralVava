@@ -8,7 +8,6 @@ package model;
 import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 
 /**
  * @author adamg
@@ -24,7 +23,10 @@ public class Movie extends Video {
     }
 
     public Movie() {
+        super();
     }
+
+
 
     public ArrayList<Integer> getRelatedIndices() {
         return relatedIndices;

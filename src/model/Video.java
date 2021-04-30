@@ -10,6 +10,7 @@ import model.interfaces.Listable;
 import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlList;
 
 /**
  *
@@ -34,7 +35,7 @@ public abstract class Video implements Listable {
     private Rating ratings;
     
     private ArrayList<VideoCharacter> characters;
-    
+
     private ArrayList<Review> reviews;
 
     private String relevantSortInfo = "";
@@ -128,16 +129,27 @@ public abstract class Video implements Listable {
     }
     
     public ArrayList<Review> getReviews() {
+        setupReviews();
         return reviews;
     }
 
     public void setReviews(ArrayList<Review> reviews) {
         this.reviews = reviews;
+        setupReviews();
     }
 
     public int getNumberOfReviews() {
         return this.reviews.size();
     }
+
+    private void setupReviews() {
+        for (Review review : this.reviews) {
+            AppState.debug(review.toString());
+            review.setVideo(this);
+        }
+    }
+
+
 
     public void addReview(Review review) {
         this.reviews.add(review);
@@ -198,10 +210,12 @@ public abstract class Video implements Listable {
         this.ratings = ratings;
         this.director = director;
         this.reviews = new ArrayList<>();
+        setupReviews();
     }
 
     public Video() {
         this.reviews = new ArrayList<>();
+        setupReviews();
     }
 
     public String getType() {

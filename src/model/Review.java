@@ -7,15 +7,26 @@ package model;
 
 import model.interfaces.Listable;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlTransient;
+import java.beans.Transient;
+
 /**
- *
  * @author adamg
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Review implements Listable {
 
+    @XmlTransient
     private User user;
+
+    @XmlTransient
     private Video video;
 
+    private Integer movieIndex;
+    private Integer tvShowIndex;
     private String username;
     private String title;
     private String commentary;
@@ -74,5 +85,9 @@ public class Review implements Listable {
         this.title = title;
         this.commentary = commentary;
         this.score = score;
+    }
+
+    public Review() {
+
     }
 }

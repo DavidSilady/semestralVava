@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import model.interfaces.Listable;
 import model.interfaces.Passable;
 
+import javax.xml.bind.annotation.XmlTransient;
+
 
 public class User implements Listable, Passable {
     private String name = "";
