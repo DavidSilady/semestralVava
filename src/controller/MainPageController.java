@@ -4,6 +4,7 @@ import controller.abstracts.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -12,9 +13,14 @@ import model.User;
 import model.Video;
 import view.SceneManager;
 
-public class MainPageController extends Controller {
+import java.net.URL;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class MainPageController extends Controller implements Initializable {
 
     public Button myListsButton;
+    public Button localeButton;
     @FXML
     private AnchorPane dynamicPane;
 
@@ -55,11 +61,6 @@ public class MainPageController extends Controller {
     }
 
     public void init() throws Exception {
-        if (AppState.getInstance().getActiveUser() == null) {
-            logButton.setText("Log In");
-            profileButton.setText("Anonymous");
-            myListsButton.setVisible(false);
-        }
         SceneManager.switchDynamicPane(dynamicPane, "homePane");
     }
 
@@ -83,5 +84,26 @@ public class MainPageController extends Controller {
 
     public void goToMyLists(ActionEvent event) throws Exception {
         redirectToProfilePane(AppState.getInstance().getActiveUser());
+    }
+
+    // Internationalization
+
+    private ResourceBundle bundle;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        bundle = resources;
+        if (AppState.getInstance().getActiveUser() == null) {
+            logButton.setText(bundle.getString("logIn"));
+            profileButton.setText(bundle.getString("anonymous"));
+            myListsButton.setVisible(false);
+        }
+    }
+
+    public void changeLocale(ActionEvent event) throws Exception {
+        SceneManager.changeLocale(
+            new Locale(bundle.getString("alternativeLanguage"), bundle.getString("alternativeCountry"))
+        );
+        SceneManager.switchScene(event, "mainPage");
     }
 }

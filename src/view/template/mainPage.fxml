@@ -10,21 +10,22 @@
 <AnchorPane prefHeight="720" prefWidth="1165" style="-fx-background-color: white;" stylesheets="/view/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPageController">
    <children>
       <AnchorPane fx:id="dynamicPane" layoutY="80.0" prefHeight="640.0" prefWidth="1165.0" />
-      <Text layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGO" textAlignment="CENTER">
+      <Text layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMD-Beta" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Text>
       <Pane layoutX="114.0" layoutY="4.0" prefHeight="25.0" prefWidth="1051.0" style="-fx-background-color: white; -fx-border-color: #EF5350; -fx-border-width: 0 0 2 0;">
          <children>
-            <Button fx:id="logButton" layoutX="944.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="107.0" text="Log Out" />
-            <Button fx:id="profileButton" layoutX="826.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="Edit Profile" />
-            <TextField fx:id="searchField" layoutX="265.0" prefHeight="25.0" prefWidth="270.0" promptText="Search term" />
-            <Button fx:id="searchButton" layoutX="535.0" mnemonicParsing="false" onAction="#searchGeneral" prefHeight="25.0" prefWidth="66.0" text="Search" />
-            <Button mnemonicParsing="false" onAction="#goToDaily" prefHeight="25.0" prefWidth="107.0" text="Daily Tips" />
-            <Button layoutX="118.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="25.0" prefWidth="107.0" text="Home" />
-            <Button fx:id="myListsButton" layoutX="707.0" mnemonicParsing="false" onAction="#goToMyLists" prefHeight="25.0" prefWidth="107.0" text="My Lists" />
+            <Button fx:id="logButton" layoutX="944.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="107.0" text="%logOut" />
+            <Button fx:id="profileButton" layoutX="826.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="107.0" text="%editProfile" />
+            <TextField fx:id="searchField" layoutX="265.0" prefHeight="25.0" prefWidth="270.0" promptText="%searchTerm" />
+            <Button fx:id="searchButton" layoutX="535.0" mnemonicParsing="false" onAction="#searchGeneral" prefHeight="25.0" prefWidth="66.0" text="%search" />
+            <Button mnemonicParsing="false" onAction="#goToDaily" prefHeight="25.0" prefWidth="107.0" text="%daily" />
+            <Button layoutX="118.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="25.0" prefWidth="107.0" text="%home" />
+            <Button fx:id="myListsButton" layoutX="707.0" mnemonicParsing="false" onAction="#goToMyLists" prefHeight="25.0" prefWidth="107.0" text="%myLists" />
          </children>
       </Pane>
+      <Button fx:id="localeButton" layoutX="1071.0" layoutY="42.0" mnemonicParsing="false" onAction="#changeLocale" prefHeight="25.0" prefWidth="107.0" text="%translate" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>

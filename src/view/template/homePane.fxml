@@ -3,29 +3,23 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="640.0" prefWidth="1165.0" style="-fx-background-color: white;" stylesheets="/view/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePaneController">
    <children>
-      <Text layoutX="1087.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME">
-         <font>
-            <Font name="System Italic" size="18.0" />
-         </font>
-      </Text>
       <AnchorPane fx:id="newReleasesPane" layoutX="19.0" layoutY="69.0" prefHeight="557.0" prefWidth="760.0" style="-fx-background-color: #EF5350;" AnchorPane.leftAnchor="10.0" />
       <AnchorPane fx:id="mostViewedPane" layoutX="395.0" layoutY="386.0" prefHeight="240.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" AnchorPane.rightAnchor="10.0" />
       <AnchorPane fx:id="recommendedPane" layoutX="787.0" layoutY="97.0" prefHeight="240.0" prefWidth="370.0" style="-fx-background-color: #EF5350;" AnchorPane.rightAnchor="8.0" />
-      <Label fx:id="newReleasesLabel" layoutX="7.0" layoutY="27.0" text="New Releases" textFill="#ef5350">
+      <Label fx:id="newReleasesLabel" layoutX="7.0" layoutY="27.0" text="%newReleases" textFill="#ef5350">
          <font>
             <Font name="System Bold" size="39.0" />
          </font>
       </Label>
-      <Label fx:id="mostViewedLabel" layoutX="782.0" layoutY="344.0" text="Most Viewed" textFill="#ef5350">
+      <Label fx:id="mostViewedLabel" layoutX="782.0" layoutY="344.0" text="%mostViewed" textFill="#ef5350">
          <font>
             <Font name="System Bold" size="39.0" />
          </font>
       </Label>
-      <Label fx:id="recommendedLabel" layoutX="784.0" layoutY="55.0" text="Recommended" textFill="#ef5350">
+      <Label fx:id="recommendedLabel" layoutX="784.0" layoutY="55.0" text="%recommended" textFill="#ef5350">
          <font>
             <Font name="System Bold" size="39.0" />
          </font>
