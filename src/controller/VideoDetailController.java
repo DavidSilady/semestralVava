@@ -149,10 +149,10 @@ public class VideoDetailController extends Controller {
 
         if (video instanceof Movie) {
             activeUser.addFavMovie((Movie) video);
-            pushNotification("Notification Demo", "Movie added", "Movie " + video.getTitle() + " has been added to favourites.");
+            AppState.pushNotification("Notification Demo", "Movie added", "Movie " + video.getTitle() + " has been added to favourites.");
         } else if (video instanceof TVShow) {
             activeUser.addFavTVShow((TVShow) video);
-            pushNotification("Notification Demo", "TV show added", "TV show " + video.getTitle() + " has been added to favourites.");
+            AppState.pushNotification("Notification Demo", "TV show added", "TV show " + video.getTitle() + " has been added to favourites.");
         }
     }
 
@@ -162,16 +162,6 @@ public class VideoDetailController extends Controller {
         } else if (video instanceof TVShow) {
             displayTVShowSpecifics();
         }
-    }
-
-    private void pushNotification(String tooltip, String title, String text) throws AWTException {
-        SystemTray tray = SystemTray.getSystemTray();
-        Image image = Toolkit.getDefaultToolkit().createImage("icon.png");
-        TrayIcon trayIcon = new TrayIcon(image, tooltip);
-        trayIcon.setImageAutoSize(true);
-        trayIcon.setToolTip(tooltip);
-        tray.add(trayIcon);
-        trayIcon.displayMessage(title, text, TrayIcon.MessageType.INFO);
     }
 
     private void displayMovieSpecifics() {

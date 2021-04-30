@@ -1,5 +1,6 @@
 package model;
 
+import java.awt.*;
 import java.util.ArrayList;
 import xml_io_manager.XML_ReadWrite;
 
@@ -26,6 +27,16 @@ public class AppState {
         if (DEBUG) {
             System.out.println(output);
         }
+    }
+
+    public static void pushNotification(String tooltip, String title, String text) throws AWTException {
+        SystemTray tray = SystemTray.getSystemTray();
+        Image image = Toolkit.getDefaultToolkit().createImage("icon.png");
+        TrayIcon trayIcon = new TrayIcon(image, tooltip);
+        trayIcon.setImageAutoSize(true);
+        trayIcon.setToolTip(tooltip);
+        tray.add(trayIcon);
+        trayIcon.displayMessage(title, text, TrayIcon.MessageType.INFO);
     }
 
     public ArrayList<Video> getVideos() {
