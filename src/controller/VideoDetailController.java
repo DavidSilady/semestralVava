@@ -13,7 +13,6 @@ import model.Video;
 import view.SceneManager;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class VideoDetailController extends Controller {
 
@@ -81,6 +80,7 @@ public class VideoDetailController extends Controller {
                 (byte) Math.floor(reviewRatingSlider.getValue() * 10)
         );
         review.setUser(AppState.getInstance().getActiveUser());
+        review.setVideo(video);
 
         if (AppState.getInstance().getActiveUser() != null) {
             AppState.getInstance().getActiveUser().addReview(review);
@@ -88,6 +88,7 @@ public class VideoDetailController extends Controller {
 
         video.addReview(review);
         reviewsContainerController.updateListing(new ArrayList<>(video.getReviews()));
+        ratingText.setText((float) video.getAvgRating() / 10 + "*");
     }
 
     public void setVideo(Video video) throws Exception {

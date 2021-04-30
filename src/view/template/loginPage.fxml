@@ -40,5 +40,6 @@
       <Button fx:id="registerButton" layoutX="806.0" layoutY="503.0" mnemonicParsing="false" onAction="#onRegister" prefHeight="48.0" prefWidth="164.0" text="REGISTER" />
       <Label fx:id="errorLabel" layoutX="87.0" layoutY="251.0" prefHeight="17.0" prefWidth="353.0" textFill="RED" />
       <Label fx:id="regStatusLabel" layoutX="715.0" layoutY="479.0" prefHeight="17.0" prefWidth="353.0" textFill="RED" />
+      <Button fx:id="continueButton" layoutX="69.0" layoutY="653.0" mnemonicParsing="false" onAction="#continueWithoutLogin" prefHeight="25.0" prefWidth="389.0" text="CONTINUE WITHOUT LOGIN" />
    </children>
 </AnchorPane>

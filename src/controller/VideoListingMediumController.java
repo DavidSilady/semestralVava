@@ -52,6 +52,6 @@ public class VideoListingMediumController extends Controller implements Listable
 
         curiosityText.setText(video.getCuriosity());
         directorLabel.setText(video.getDirector());
-        lengthLabel.setText(Short.toString(video.getLength()));
+        lengthLabel.setText(video.getLength() + " mins.");
     }
 }

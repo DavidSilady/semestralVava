@@ -34,6 +34,10 @@ public class AppState {
         return connectedList;
     }
 
+    public static boolean userLoggedIn() {
+        return instance.getActiveUser() != null;
+    }
+
     public ArrayList<User> getUsers() {
         return users;
     }

@@ -14,11 +14,20 @@ import model.interfaces.Listable;
 public class Review implements Listable {
 
     private User user;
+    private Video video;
 
     private String username;
     private String title;
     private String commentary;
     private byte score;
+
+    public Video getVideo() {
+        return video;
+    }
+
+    public void setVideo(Video video) {
+        this.video = video;
+    }
 
     public User getUser() {
         return user;

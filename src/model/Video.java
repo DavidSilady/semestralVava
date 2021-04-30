@@ -212,4 +212,8 @@ public abstract class Video implements Listable {
     public String toString() {
         return "Video{" + "id=" + id + ", title=" + title + ", genre=" + genre + ", length=" + length + ", year=" + year + ", studio=" + studio + ", characters=" + characters.toString() + ", curiosity=" + curiosity + ", ratings=" + ratings + ", director=" + director + '}';
     }
+
+    public void removeReview(Review review) {
+        this.reviews.remove(review);
+    };
 }

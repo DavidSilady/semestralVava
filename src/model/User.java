@@ -121,4 +121,22 @@ public class User implements Listable, Passable {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public void removeFromFavTVShows(TVShow video) {
+        this.favTVShows.remove(video);
+    }
+
+    public void removeFromFavMovies(Movie video) {
+        this.favMovies.remove(video);
+    }
+
+    public ArrayList<Video> getAllFavourites() {
+        ArrayList<Video> list = new ArrayList<>(favMovies);
+        list.addAll(favTVShows);
+        return list;
+    }
+
+    public void removeReview(Review review) {
+        this.reviews.remove(review);
+    }
 }

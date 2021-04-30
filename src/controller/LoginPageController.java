@@ -13,6 +13,7 @@ import view.SceneManager;
 
 public class LoginPageController extends Controller {
 
+    public Button continueButton;
     @FXML
     private TextField loginUsernameField;
 
@@ -81,5 +82,8 @@ public class LoginPageController extends Controller {
         AppState.debug("User registered.");
     }
 
+    public void continueWithoutLogin(ActionEvent event) throws Exception {
+        SceneManager.switchScene(event, "mainPage");
+    }
 }
 
