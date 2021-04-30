@@ -1,11 +1,12 @@
 package controller;
 
+import controller.abstracts.Controller;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class PopUpController {
+public class PopUpController extends Controller {
     public Text titleText;
     public Text popUpText;
     public Button okButton;
