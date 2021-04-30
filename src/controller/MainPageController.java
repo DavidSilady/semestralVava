@@ -54,16 +54,21 @@ public class MainPageController extends Controller implements Initializable {
     }
 
     @FXML
-    void searchGeneral(ActionEvent event) {
+    void searchGeneral(ActionEvent event) throws Exception {
+        ArrayList<Video> finalResults = new ArrayList<>();
         try {
             ArrayList<Video> list = AppState.getInstance().getVideos();
             List<BoundExtractedResult<Video>> results = FuzzySearch.extractTop(searchField.getText(), list, Video::toString, 20);
 
             for (BoundExtractedResult<Video> result : results) {
-                AppState.debug(result.getReferent().toString());
+                finalResults.add(result.getReferent());
             }
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            FXMLLoader fxmlLoader = SceneManager.switchDynamicPane(dynamicPane, "homePane");
+            HomePaneController homePaneController = fxmlLoader.getController();
+            homePaneController.setSearchResults(finalResults);
         }
     }
 

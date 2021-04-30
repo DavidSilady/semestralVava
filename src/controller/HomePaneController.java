@@ -12,6 +12,8 @@ import view.SceneManager;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class HomePaneController extends Controller {
 
@@ -82,6 +84,13 @@ public class HomePaneController extends Controller {
 
     private void updateList(ListingContainerController controller, ArrayList<Listable> list) throws Exception {
         controller.updateListing(list);
+    }
+
+    public void setSearchResults(ArrayList<Video> results) throws Exception {
+        newReleasesPaneController.updateListing(new ArrayList<>(results));
+        Locale locale = SceneManager.getInstance().getLocale();
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.Language", locale);
+        newReleasesLabel.setText(bundle.getString("searchResults"));
     }
 
 }
