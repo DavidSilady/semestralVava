@@ -65,25 +65,39 @@ public class LoginPageController extends Controller {
     }
 
     @FXML
-    void onRegister(ActionEvent event) {
-        User user = new User(
-                regFullNameField.getText(),
-                regCityField.getText(),
-                regZipField.getText(),
-                regAddressField.getText(),
-                regPasswordField.getText(),
-                regUsernameField.getText()
-        );
-        if (AppState.getInstance().registerCustomer(user)) {
-            regStatusLabel.setText("Registration complete.");
+    void onRegister(ActionEvent event) throws Exception {
+        if (validRegisterInput()) {
+            User user = new User(
+                    regFullNameField.getText(),
+                    regCityField.getText(),
+                    regZipField.getText(),
+                    regAddressField.getText(),
+                    regPasswordField.getText(),
+                    regUsernameField.getText()
+            );
+            if (AppState.getInstance().registerCustomer(user)) {
+                regStatusLabel.setText("Registration complete.");
+            } else {
+                regStatusLabel.setText("Username already taken. Choose a different username.");
+            }
+            AppState.debug("User registered.");
         } else {
-            regStatusLabel.setText("Username already taken. Choose a different username.");
+            SceneManager.newPopUp("Invalid input", "All registration fields must be filled in");
         }
-        AppState.debug("User registered.");
+
     }
 
     public void continueWithoutLogin(ActionEvent event) throws Exception {
         SceneManager.switchScene(event, "mainPage");
+    }
+
+    private boolean validRegisterInput() {
+        return  !regFullNameField.getText().isEmpty() &&
+                !regCityField.getText().isEmpty() &&
+                !regZipField.getText().isEmpty() &&
+                !regAddressField.getText().isEmpty() &&
+                !regPasswordField.getText().isEmpty() &&
+                !regUsernameField.getText().isEmpty();
     }
 }
 

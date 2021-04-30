@@ -32,12 +32,12 @@ public abstract class Video implements Listable {
     private String curiosity;
     
     private Rating ratings;
-
-    private String relevantSortInfo = "";
     
     private ArrayList<VideoCharacter> characters;
     
     private ArrayList<Review> reviews;
+
+    private String relevantSortInfo = "";
 
     public String getRelevantSortInfo() {
         return relevantSortInfo;

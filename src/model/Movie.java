@@ -11,37 +11,36 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
 /**
- *
  * @author adamg
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Movie extends Video {
-    @XmlElement(name = "relatedIndeces")
-    private ArrayList<Integer> relatedIndeces = new ArrayList<>();
+//    @XmlElement(name = "relatedIndices")
+    private ArrayList<Integer> relatedIndices = new ArrayList<>();
 
-    public Movie(String title, String genre, short length, short year, String studio, ArrayList<VideoCharacter> characters, String curiosity, Rating ratings, String director, ArrayList<Integer> relatedIndeces) {
+    public Movie(String title, String genre, short length, short year, String studio, ArrayList<VideoCharacter> characters, String curiosity, Rating ratings, String director, ArrayList<Integer> relatedIndices) {
         super(title, genre, length, year, studio, characters, curiosity, ratings, director);
-        this.relatedIndeces = relatedIndeces;
+        this.relatedIndices = relatedIndices;
     }
 
     public Movie() {
     }
 
-    public ArrayList<Integer> getRelatedIndeces() {
-        return relatedIndeces;
+    public ArrayList<Integer> getRelatedIndices() {
+        return relatedIndices;
     }
 
-    public void setRelatedIndeces(ArrayList<Integer> relatedIndeces) {
-        this.relatedIndeces = relatedIndeces;
+    public void setRelatedIndices(ArrayList<Integer> relatedIndices) {
+        this.relatedIndices = relatedIndices;
     }
     
     public void addRelated(Integer relatedIndex){
-        this.relatedIndeces.add(relatedIndex);
+        this.relatedIndices.add(relatedIndex);
     }
 
     @Override
     public String toString() {
-        return "Movie{" + super.toString() + "related=" + relatedIndeces.toString() + '}';
+        return "Movie{" + super.toString() + "related=" + relatedIndices.toString() + '}';
     }
 
     @Override

@@ -15,8 +15,6 @@ import model.*;
 import model.interfaces.Listable;
 import view.SceneManager;
 
-import javax.jws.soap.SOAPBinding;
-import java.awt.*;
 import java.util.ArrayList;
 
 public class VideoDetailController extends Controller {
@@ -102,8 +100,9 @@ public class VideoDetailController extends Controller {
         }
     }
 
+    //Check if input is valid
     private boolean validInput() {
-        return true;
+        return !titleField.getText().equals("") && !newReviewTextArea.getText().equals("");
     }
 
     public void setVideo(Video video) throws Exception {
@@ -185,15 +184,10 @@ public class VideoDetailController extends Controller {
         FXMLLoader fxmlLoader = SceneManager.newWindow("listingContainer", 370, 250);
         ListingContainerController controller = fxmlLoader.getController();
         ArrayList<Listable> list = new ArrayList<>();
-        for (Video video : AppState.getInstance().getVideos()) {
-            for (int index : movie.getRelatedIndeces()) {
-                if (video.getId() == index) {
-                    list.add(video);
-                    break;
-                }
-            }
+        for (int index : movie.getRelatedIndices()) {
+            list.add(AppState.getInstance().getMovies().get(index));
         }
-        AppState.debug(movie.getRelatedIndeces().size() + "");
+        AppState.debug(movie.getRelatedIndices().size() + "");
         controller.setParameters(370, 250);
         controller.populate(list, "videoListingSmall");
     }
