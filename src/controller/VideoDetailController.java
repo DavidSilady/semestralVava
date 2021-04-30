@@ -7,16 +7,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
-import model.AppState;
-import model.Review;
-import model.Video;
+import model.*;
 import view.SceneManager;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
 
 public class VideoDetailController extends Controller {
 
     public TextField titleField;
+    public Label episodesLabel;
     @FXML
     private Label titleLabel;
 
@@ -106,6 +106,13 @@ public class VideoDetailController extends Controller {
         directorText.setText(video.getDirector());
         curiosityText.setText(video.getCuriosity());
 
+        if (video instanceof TVShow) {
+            TVShow tvShow = (TVShow) video;
+            episodesLabel.setText("Episodes: " + tvShow.getEpisodeCount() + " Seasons: " + tvShow.getSeasonCount());
+        } else {
+            episodesLabel.setVisible(false);
+        }
+
         setupReviews();
         setupCharacters();
     }
@@ -128,4 +135,31 @@ public class VideoDetailController extends Controller {
         charactersContainerController.populate(new ArrayList<>(video.getCharacters()), "videoCharacterListing");
     }
 
+    public void addToFavourites(ActionEvent event) {
+        User activeUser = AppState.getInstance().getActiveUser();
+        // If already in favourites, skip
+        if (activeUser.getAllFavourites().contains(video)) { return; }
+
+        if (video instanceof Movie) {
+            activeUser.addFavMovie((Movie) video);
+        } else if (video instanceof TVShow) {
+            activeUser.addFavTVShow((TVShow) video);
+        }
+    }
+
+    public void displaySpecificDetails(ActionEvent event) {
+        if (video instanceof Movie) {
+            displayMovieSpecifics();
+        } else if (video instanceof TVShow) {
+            displayTVShowSpecifics();
+        }
+    }
+
+    private void displayMovieSpecifics() {
+
+    }
+
+    private void displayTVShowSpecifics() {
+
+    }
 }
