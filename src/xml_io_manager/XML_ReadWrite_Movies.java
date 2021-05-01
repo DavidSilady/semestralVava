@@ -51,7 +51,7 @@ public class XML_ReadWrite_Movies extends XML_ReadWrite{
             return filmy;
 
         } catch (JAXBException ex) {
-            Logger.getLogger(XML_ReadWrite.class.getName()).log(Level.SEVERE, null, ex.getMessage());
+            Logger.getLogger(XML_ReadWrite.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
     }
