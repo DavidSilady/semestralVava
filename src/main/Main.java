@@ -45,7 +45,7 @@ public class Main extends Application {
             // uloz data do suboru ak su nejake recenzie
             if(!recenzieFilmXML.isEmpty()){
                 Reviews filmXML = new Reviews(recenzieFilmXML);
-                XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).write("src\\data\\moviesreviews.xml", filmXML);
+                XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).write("C:\\Users\\adamg\\OneDrive\\Počítač\\Škola\\VAVA\\Timovy-projekt\\semestralVava\\data\\moviesreviews.xml", filmXML);
             }
             
         }catch (NullPointerException e) {
@@ -69,7 +69,7 @@ public class Main extends Application {
             // uloz data do suboru ak su nejake recenzie
             if(!recenzieSerialXML.isEmpty()){            
                 Reviews serialXML = new Reviews(recenzieSerialXML);
-                XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).write("src\\data\\tvshowsreviews.xml", serialXML);
+                XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).write("C:\\Users\\adamg\\OneDrive\\Počítač\\Škola\\VAVA\\Timovy-projekt\\semestralVava\\data\\tvshowsreviews.xml", serialXML);
             }
             
         }catch (NullPointerException e) {
@@ -84,19 +84,19 @@ public class Main extends Application {
         
         try {
             Movies moviesXML = new Movies(AppState.getInstance().getMovies());
-            XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPMOVIES).write("src\\data\\movies.xml", moviesXML);
+            XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPMOVIES).write("C:\\Users\\adamg\\OneDrive\\Počítač\\Škola\\VAVA\\Timovy-projekt\\semestralVava\\data\\movies.xml", moviesXML);
         } catch (NullPointerException e) {
             AppState.error("Error while writing movies");
         }
         try {
             TVShows tvShowsXML = new TVShows(AppState.getInstance().getTvshows());
-            XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPTVSHOWS).write("src\\data\\tvshows.xml", tvShowsXML);
+            XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPTVSHOWS).write("C:\\Users\\adamg\\OneDrive\\Počítač\\Škola\\VAVA\\Timovy-projekt\\semestralVava\\data\\tvshows.xml", tvShowsXML);
         } catch (NullPointerException e) {
             AppState.error("Error while writing TV shows");
         }
         try {
             Users usersXML = new Users(AppState.getInstance().getUsers());
-            XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPUSERS).write("src\\data\\users.xml", usersXML);
+            XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPUSERS).write("C:\\Users\\adamg\\OneDrive\\Počítač\\Škola\\VAVA\\Timovy-projekt\\semestralVava\\data\\users.xml", usersXML);
         } catch (NullPointerException e) {
             AppState.error("Error while writing users");
         }

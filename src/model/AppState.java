@@ -15,15 +15,15 @@ public class AppState {
     private static final Boolean DEBUG = true;
     private AppState() {
         //this.users = new ArrayList<>();
-        Reviews movieReviews = (Reviews) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).read("src\\data\\moviesreviews.xml");
-        Reviews tvshowReviews = (Reviews) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).read("src\\data\\tvshowsreviews.xml");
+        Reviews movieReviews = (Reviews) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).read("C:\\Users\\adamg\\OneDrive\\Počítač\\Škola\\VAVA\\Timovy-projekt\\semestralVava\\data\\moviesreviews.xml");
+        Reviews tvshowReviews = (Reviews) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).read("C:\\Users\\adamg\\OneDrive\\Počítač\\Škola\\VAVA\\Timovy-projekt\\semestralVava\\data\\tvshowsreviews.xml");
         
         System.out.println("tvshowReviews = " + tvshowReviews);
         System.out.println("movieReviews = " + movieReviews);
         
-        Users usrs = (Users) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPUSERS).read("src\\data\\users.xml");
-        Movies mvs = (Movies) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPMOVIES).read("src\\data\\movies.xml");
-        TVShows tvs = (TVShows) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPTVSHOWS).read("src\\data\\tvshows.xml");
+        Users usrs = (Users) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPUSERS).read("C:\\Users\\adamg\\OneDrive\\Počítač\\Škola\\VAVA\\Timovy-projekt\\semestralVava\\data\\users.xml");
+        Movies mvs = (Movies) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPMOVIES).read("C:\\Users\\adamg\\OneDrive\\Počítač\\Škola\\VAVA\\Timovy-projekt\\semestralVava\\data\\movies.xml");
+        TVShows tvs = (TVShows) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPTVSHOWS).read("C:\\Users\\adamg\\OneDrive\\Počítač\\Škola\\VAVA\\Timovy-projekt\\semestralVava\\data\\tvshows.xml");
         
         this.users = usrs.getUsers();
         this.movies = mvs.getFilmy();
