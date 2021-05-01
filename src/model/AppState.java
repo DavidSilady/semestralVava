@@ -12,7 +12,7 @@ import xml_io_manager.XML_ReadWrite;
 
 public class AppState {
     private static AppState instance = null;
-    private static final Boolean DEBUG = true;
+    private static final Boolean DEBUG = false;
     private AppState() {
         //this.users = new ArrayList<>();
         Reviews movieReviews = (Reviews) XML_ReadWrite.getXML_RW(XML_ReadWrite.TYPREVIEWS).read(System.getProperty("user.dir") + "\\data\\moviesreviews.xml");
